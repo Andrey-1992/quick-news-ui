@@ -2,7 +2,11 @@ import './Header.css';
 import React from 'react';
 import { NavBar } from '../NavBar/NavBar'
 
-export const Header: React.FC = () => {
+interface Props {
+  makeFetch: (searchedCategory: string) => void;
+}
+
+export const Header: React.FC<Props> = ({makeFetch}) => {
   let currentTime = new Date();
   console.log(currentTime)
 

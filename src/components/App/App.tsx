@@ -8,21 +8,34 @@ import { SavedNewsContainer } from '../SavedNewsContainer/SavedNewsContainer';
 import { fetchTopStories } from '../Util/util';
 import { useState, useEffect } from 'react';
 
+interface NewsInfoApi {
+  status?: string
+  copyright?: string
+  section?: string
+  last_updated?: string
+  num_results?: number
+  results?: Array<string>
+}
 
-export const App = () => {
-  const [searchedNews, setSearchedNews] = useState({})
+export const App: React.FC = () => {
+  const [searchedNews, setSearchedNews] = useState<NewsInfoApi>({})
+
+  useEffect(() => {
+    makeFetch('home')
+  }, [])
 
   const makeFetch = (searchedCategory: string) => {
     fetchTopStories(searchedCategory)
     .then(data => setSearchedNews(data))
+    // .then(data => console.log(data))
   }
 
   return (
     <div className="App">
-      <Header /> 
+      <Header makeFetch={makeFetch}/> 
       <main className="main-section">
         <Switch>
-          <Route exact path="/quick-news" render={() => <Home />}/>
+          <Route exact path="/quick-news" render={() => <Home searchedNews={searchedNews}/>}/>
           <Route exact path="/saved-news" render={() => <SavedNewsContainer />}/>
           <Route path="*" render={() => <Error />}/>
         </Switch>

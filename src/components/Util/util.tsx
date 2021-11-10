@@ -6,6 +6,9 @@ export const fetchTopStories = async (newCategory: string) => {
     }
     const data = await response.json()
     return data
+    // const dataResults = await data.results
+    // return dataResults
+    // console.log(dataResults)
   } catch(err) {
     return err;
   }
