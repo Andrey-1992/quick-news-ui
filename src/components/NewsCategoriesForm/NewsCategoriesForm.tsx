@@ -9,7 +9,7 @@ export const NewsCategoriesForm: React.FC = () => {
     {Name:'Insider', Value:'insider'}, {Name:'Magazine', Value:'magazine'},
     {Name:'Movies', Value:'movies'}, {Name:'NY Region', Value:'nyregion'},
     {Name:'Obituaries', Value:'obituaries'}, {Name:'Opinion', Value:'opinion'},{Name:'Politics', Value:'politics'},
-    {Name:'Realstate', Value:'realstate'}, {Name:'Science', Values:'science'}, {Name:'Sports', Value:'sports'}, 
+    {Name:'Real State', Value:'realstate'}, {Name:'Science', Values:'science'}, {Name:'Sports', Value:'sports'}, 
     {Name:'Sunday Review', Value:'sundayreview'}, {Name:'Technology', Value:'technology'}, {Name:'Theater', Values:'theater'},
     {Name:'T-Magazine', Value:'t-magazine'}, {Name:'Travel', Value:'travel'}, {Name:'Upshot', Values:'upshot'},
     {Name:'Us', Value:'us'}, {Name:'World', Value:'world'}
