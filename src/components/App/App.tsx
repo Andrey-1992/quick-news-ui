@@ -1,12 +1,21 @@
-import React from 'react';
 import './App.css';
+import React from 'react';
 import { Error } from '../Error/Error';
+import { Route, Switch } from 'react-router-dom';
+import { Header } from '../Header/Header';
+import { Home } from '../Home/Home';
 
-export const App: React.FC = () => {
+
+export const App = () => {
   return (
     <div className="App">
-      <p>App</p>
-      <Error />
+      <Header /> 
+      <main className="main-section">
+        <Switch>
+          <Route exact path="/quick-news" render={() => <Home />}/>
+          <Route path="*" render={() => <Error />}/>
+        </Switch>
+      </main>
     </div>
   );
 }
