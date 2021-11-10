@@ -5,7 +5,12 @@ import { NavLink } from 'react-router-dom';
 export const NavBar: React.FC = () => {
   return (
     <div className="NavBar">
-      <p>NavBar</p>
+      <NavLink className='go-home' to="/quick-news">
+        <p className="nav-buttons">Home</p>
+      </NavLink>
+      <NavLink className='go-saved-news' to="/saved-news">
+        <p className="nav-buttons">Saved News</p>
+      </NavLink>
     </div>
   );
 }
