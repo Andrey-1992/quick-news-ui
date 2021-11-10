@@ -5,6 +5,9 @@ import { Route, Switch } from 'react-router-dom';
 import { Header } from '../Header/Header';
 import { Home } from '../Home/Home';
 import { SavedNewsContainer } from '../SavedNewsContainer/SavedNewsContainer';
+import { fetchTopStories } from '../Util/util';
+import { useState, useEffect } from 'react';
+
 
 export const App = () => {
   return (

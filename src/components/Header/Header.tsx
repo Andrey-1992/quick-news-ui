@@ -3,7 +3,7 @@ import React from 'react';
 import { NavBar } from '../NavBar/NavBar'
 
 export const Header: React.FC = () => {
-  const currentTime = new Date();
+  let currentTime = new Date();
   console.log(currentTime)
 
   return (
