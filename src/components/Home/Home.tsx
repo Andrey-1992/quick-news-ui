@@ -1,5 +1,7 @@
-import React from 'react';
 import './Home.css';
+import React from 'react';
+import { NewsCardContainer } from '../NewsCardContainer/NewsCardContainer';
+import { Loading } from '../Loading/Loading';
 
 interface NewsInfoApi {
   status?: string
@@ -38,20 +40,19 @@ interface Props {
 
 export const Home: React.FC<Props> = ({searchedNews}) => {
   if (searchedNews) {
-    console.log(searchedNews)
-    const resultArray = searchedNews.results
-    const testMap = resultArray.map(news => news.title)
-    console.log(testMap)
-    return (
-      <div className="Home">
-        {/* <p>{resultArray[0].url}</p> */}
-        {resultArray.map(news => <p>{news.title}</p>)}
-      </div>
-    );
+    // console.log(searchedNews)
+    // const resultArray = searchedNews.results
+    // const testMap = resultArray.map(news => news.title)
+    // console.log(testMap)
+    // return (
+    //   <div className="Home">
+    //     {/* <p>{resultArray[0].url}</p> */}
+    //     {resultArray.map(news => <p>{news.title}</p>)}
+    //   </div>
+    // );
+    <NewsCardContainer />
   }
   return (
-    <div className="Home">
-      <p>Home</p>
-    </div>
+    <Loading />
   );
 }

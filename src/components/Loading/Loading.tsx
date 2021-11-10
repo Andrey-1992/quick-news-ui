@@ -1,10 +1,8 @@
+import './Loading.css'
 import React from 'react';
-import './Loadin.css';
 
-export const Loadin: React.FC = () => {
-  return (
-    <div className="Loadin">
-      <p>Loadin</p>
-    </div>
-  );
+export const Loading: React.FC = () => {
+  return  (
+    <h2 className='loading'>Loading...</h2>
+  )
 }
