@@ -4,7 +4,7 @@ import { Error } from '../Error/Error';
 import { Route, Switch } from 'react-router-dom';
 import { Header } from '../Header/Header';
 import { Home } from '../Home/Home';
-
+import { SavedNewsContainer } from '../SavedNewsContainer/SavedNewsContainer';
 
 export const App = () => {
   return (
@@ -13,6 +13,7 @@ export const App = () => {
       <main className="main-section">
         <Switch>
           <Route exact path="/quick-news" render={() => <Home />}/>
+          <Route exact path="/saved-news" render={() => <SavedNewsContainer />}/>
           <Route path="*" render={() => <Error />}/>
         </Switch>
       </main>
