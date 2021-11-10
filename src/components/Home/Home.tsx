@@ -44,13 +44,14 @@ export const Home: React.FC<Props> = ({searchedNews}) => {
     // const resultArray = searchedNews.results
     // const testMap = resultArray.map(news => news.title)
     // console.log(testMap)
-    // return (
-    //   <div className="Home">
-    //     {/* <p>{resultArray[0].url}</p> */}
-    //     {resultArray.map(news => <p>{news.title}</p>)}
-    //   </div>
-    // );
-    <NewsCardContainer />
+    return (
+      // <div className="Home">
+      //   {/* <p>{resultArray[0].url}</p> */}
+      //   {resultArray.map(news => <p>{news.title}</p>)}
+      // </div>
+      <NewsCardContainer searchedNews={searchedNews}/>
+    );
+    // <p>Test</p>
   }
   return (
     <Loading />
