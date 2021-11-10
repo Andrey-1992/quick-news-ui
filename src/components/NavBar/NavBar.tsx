@@ -1,5 +1,6 @@
-import React from 'react';
 import './NavBar.css';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export const NavBar: React.FC = () => {
   return (
