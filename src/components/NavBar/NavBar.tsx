@@ -1,6 +1,8 @@
 import './NavBar.css';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { NewsCategoriesForm } from '../NewsCategoriesForm/NewsCategoriesForm'
+
 
 export const NavBar: React.FC = () => {
   const newsCategory = [
@@ -16,11 +18,7 @@ export const NavBar: React.FC = () => {
     {Name:'Us', Value:'us'}, {Name:'World', Value:'world'}
   ]
 
-    /*
-    arts, automobiles, books, business, fashion, food, health, home, insider, magazine, movies, nyregion, obituaries, opinion, politics, realestate, 
-    science, sports, sundayreview, technology, theater, t-magazine, travel, upshot, us, world
-    */
-
+  
   return (
     <div className="NavBar">
       <NavLink className='go-home' to="/quick-news">
@@ -29,6 +27,15 @@ export const NavBar: React.FC = () => {
       <NavLink className='go-saved-news' to="/saved-news">
         <p className="nav-buttons">Saved News</p>
       </NavLink>
+      <NewsCategoriesForm />
     </div>
   );
 }
+
+
+
+
+/*
+arts, automobiles, books, business, fashion, food, health, home, insider, magazine, movies, nyregion, obituaries, opinion, politics, realestate, 
+science, sports, sundayreview, technology, theater, t-magazine, travel, upshot, us, world
+*/
