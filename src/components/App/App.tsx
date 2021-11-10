@@ -10,6 +10,13 @@ import { useState, useEffect } from 'react';
 
 
 export const App = () => {
+  const [searchedNews, setSearchedNews] = useState({})
+
+  const makeFetch = (searchedCategory: string) => {
+    fetchTopStories(searchedCategory)
+    .then(data => setSearchedNews(data))
+  }
+
   return (
     <div className="App">
       <Header /> 
