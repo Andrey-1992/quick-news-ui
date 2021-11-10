@@ -7,7 +7,7 @@ interface NewsInfoApi {
   section?: string
   last_updated?: string
   num_results?: number
-  results?: Array<string>
+  results: Array<Article>
 }
 
 interface Article {
@@ -41,10 +41,10 @@ export const Home: React.FC<Props> = ({searchedNews}) => {
     console.log(searchedNews)
     const resultArray = searchedNews.results
     // const testMap = resultArray.map(news => news.title)
-    console.log(typeof resultArray.section)
+    console.log(resultArray[0].url)
     return (
       <div className="Home">
-        <p>{searchedNews.copyright}</p>
+        <p>{resultArray[0].url}</p>
 
       </div>
     );
