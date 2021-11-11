@@ -36,9 +36,11 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews}) => {
       <p>{articleNews.published_date}</p>
       <p>{articleNews.section}</p>
       <p>{articleNews.url}</p>
+      <button className='read-article-btn'>
+        <a href={articleNews.url} target="_blank">Read Article</a>
+      </button>
       <button className='save-btn'>Save Article</button>
-      <button className='read-article-btn'>Read Article</button>
-      <button className='back-home-btn'>Back home</button>
+      <button className='back-home-btn'>Back Home</button>
     </div>
   );
 }
