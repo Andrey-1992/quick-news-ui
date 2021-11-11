@@ -32,8 +32,19 @@ interface Article {
   org_facet?: Array<string>
   per_facet?: Array<string>
   geo_facet?: Array<string>
-  multimedia?: Array<string>
+  multimedia: Array<MultimediaInfo>
   short_url?: string
+}
+
+interface MultimediaInfo {
+  caption: string
+  copyright: string
+  format: string
+  height: number
+  subtype: string
+  type: string
+  url: string
+  width: number
 }
 
 interface Props {
@@ -45,12 +56,9 @@ export const NewsCardContainer: React.FC<Props> = ({searchedNews}) => {
   const [ articleName, setArticleName ] = useState<string | undefined>('');
 
   const changeViewStatus = (viewStatus: string, articleTitle?: string):void => {
-    // let fakeArticle 
     if (viewStatus === 'overview') {
-      // fakeArticle = articleTitle
       setDetailedView(false)
       setArticleName(articleTitle)
-      // console.log(typeof articleTitle)
     } else if (viewStatus === 'detailed') {
       setDetailedView(true)
     }  
@@ -58,16 +66,13 @@ export const NewsCardContainer: React.FC<Props> = ({searchedNews}) => {
 
   if (searchedNews) {
     const resultArray = searchedNews.results
-    // console.log(articleName)
     const findArticle = resultArray.filter(article => article.title === articleName);
     const newsCardDetail= findArticle.map(news => <NewsCardDetailed articleNews={news} changeViewStatus={changeViewStatus}/>)
-    // console.log(findArticle)
+    console.log(findArticle)
     // const newsCardDetail= resultArray.map(news => <NewsCardDetailed articleNews={news} changeViewStatus={changeViewStatus}/>)
     const newsCardOver= resultArray.map(news => <NewsCardOverview articleNews={news} changeViewStatus={changeViewStatus}/>)
     return (
       <div className="Home">
-        {/* {newsCardDetail}
-        {newsCardOver} */}
         {!detailedView ? newsCardDetail : newsCardOver}
       </div>
     );

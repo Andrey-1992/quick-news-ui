@@ -1,5 +1,6 @@
 import './NewsCardOverview.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
 interface Article {
   section?: string
   subsection?: string
@@ -18,8 +19,19 @@ interface Article {
   org_facet?: Array<string>
   per_facet?: Array<string>
   geo_facet?: Array<string>
-  multimedia?: Array<string>
+  multimedia: Array<MultimediaInfo>
   short_url?: string
+}
+
+interface MultimediaInfo {
+  caption: string
+  copyright: string
+  format: string
+  height: number
+  subtype: string
+  type: string
+  url: string
+  width: number
 }
 
 interface Props {
@@ -28,17 +40,19 @@ interface Props {
 }
 
 export const NewsCardOverview: React.FC<Props> = ({articleNews, changeViewStatus}) => {
-  // console.log(articleNews)
+  // console.log(articleNews.multimedia[0].url)
   let articleNaming = articleNews.title
   const sendStatus = ():void => {
       changeViewStatus('overview', articleNaming)
   }
 
   return (
-    <div className="NewsCardDetailed">
+    <div className="NewsCardDetailed" style={{ backgroundImage: `url(${articleNews.multimedia[0].url})` }}>
+      {/* <img src={articleNews.multimedia[0].url} alt={articleNews.multimedia[0].caption} width="500" height="600"></img> */}
       <p>{articleNews.title}</p>
       <p>{articleNews.section}</p>
       <p>{articleNews.published_date}</p>
+      {/* <p>{articleNews.multimedia}</p> */}
       <button className="more-info-btn" onClick={sendStatus}>More info</button>
     </div>
   );
