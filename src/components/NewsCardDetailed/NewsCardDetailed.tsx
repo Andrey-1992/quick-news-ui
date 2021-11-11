@@ -24,10 +24,10 @@ interface Article {
 
 interface Props {
   articleNews: Article
-  detailedView: boolean
+  changeViewStatus: (viewStatus: string) => void
 }
 
-export const NewsCardDetailed: React.FC<Props> = ({articleNews, detailedView}) => {
+export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus}) => {
   console.log(articleNews)
   return (
     <div className="NewsCardDetailed">
