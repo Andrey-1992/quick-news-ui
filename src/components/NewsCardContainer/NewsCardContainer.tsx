@@ -45,12 +45,9 @@ export const NewsCardContainer: React.FC<Props> = ({searchedNews}) => {
   const [ articleName, setArticleName ] = useState<string | undefined>('');
 
   const changeViewStatus = (viewStatus: string, articleTitle?: string):void => {
-    // let fakeArticle 
     if (viewStatus === 'overview') {
-      // fakeArticle = articleTitle
       setDetailedView(false)
       setArticleName(articleTitle)
-      // console.log(typeof articleTitle)
     } else if (viewStatus === 'detailed') {
       setDetailedView(true)
     }  
@@ -66,8 +63,6 @@ export const NewsCardContainer: React.FC<Props> = ({searchedNews}) => {
     const newsCardOver= resultArray.map(news => <NewsCardOverview articleNews={news} changeViewStatus={changeViewStatus}/>)
     return (
       <div className="Home">
-        {/* {newsCardDetail}
-        {newsCardOver} */}
         {!detailedView ? newsCardDetail : newsCardOver}
       </div>
     );
