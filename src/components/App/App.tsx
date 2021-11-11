@@ -35,8 +35,19 @@ interface Article {
   org_facet?: Array<string>
   per_facet?: Array<string>
   geo_facet?: Array<string>
-  multimedia?: Array<string>
+  multimedia: MultimediaInfo
   short_url?: string
+}
+
+interface MultimediaInfo {
+  caption: string
+  copyright: string
+  format: string
+  height: number
+  subtype: string
+  type: string
+  url: string
+  width: number
 }
 
 export const App: React.FC = () => {

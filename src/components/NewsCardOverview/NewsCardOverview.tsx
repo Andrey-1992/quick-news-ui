@@ -18,7 +18,7 @@ interface Article {
   org_facet?: Array<string>
   per_facet?: Array<string>
   geo_facet?: Array<string>
-  multimedia?: Array<MultimediaInfo>
+  multimedia: MultimediaInfo
   short_url?: string
 }
 
@@ -39,7 +39,7 @@ interface Props {
 }
 
 export const NewsCardOverview: React.FC<Props> = ({articleNews, changeViewStatus}) => {
-  console.log(articleNews.multimedia)
+  console.log(articleNews.multimedia.url)
   let articleNaming = articleNews.title
   const sendStatus = ():void => {
       changeViewStatus('overview', articleNaming)

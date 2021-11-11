@@ -32,7 +32,7 @@ interface Article {
   org_facet?: Array<string>
   per_facet?: Array<string>
   geo_facet?: Array<string>
-  multimedia?: Array<MultimediaInfo>
+  multimedia: MultimediaInfo
   short_url?: string
 }
 
