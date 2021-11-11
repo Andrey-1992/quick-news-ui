@@ -34,6 +34,7 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews}) => {
       <p>{articleNews.abstract}</p>
       <p>{articleNews.byline}</p>
       <p>{articleNews.published_date}</p>
+      <p>{articleNews.section}</p>
       <p>{articleNews.url}</p>
       <button className='save-btn'>Save Article</button>
       <button className='read-article-btn'>Read Article</button>

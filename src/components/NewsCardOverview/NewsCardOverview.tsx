@@ -31,6 +31,7 @@ export const NewsCardOverview: React.FC<Props> = ({articleNews}) => {
   return (
     <div className="NewsCardDetailed">
       <p>{articleNews.title}</p>
+      <p>{articleNews.section}</p>
     </div>
   );
 }
