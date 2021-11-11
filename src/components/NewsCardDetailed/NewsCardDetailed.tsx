@@ -41,6 +41,10 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews}) => {
   return (
     <div className="NewsCardDetailed">
       <p>{articleNews.title}</p>
+      <p>{articleNews.abstract}</p>
+      <p>{articleNews.byline}</p>
+      <p>{articleNews.published_date}</p>
+      <p>{articleNews.url}</p>
     </div>
   );
 }
