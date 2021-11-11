@@ -41,6 +41,8 @@ interface Props {
 }
 
 export const NewsCardContainer: React.FC<Props> = ({searchedNews}) => {
+  const [ detailedView, setDetailedView ] = useState<boolean>(false)
+
   if (searchedNews) {
     const resultArray = searchedNews.results
     const newsCardDetail= resultArray.map(news => <NewsCardDetailed articleNews={news} />)
