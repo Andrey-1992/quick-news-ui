@@ -37,7 +37,7 @@ interface Props {
 }
 
 export const NewsCardDetailed: React.FC<Props> = ({articleNews}) => {
-  console.log(articleNews)
+  // console.log(articleNews)
   return (
     <div className="NewsCardDetailed">
       <p>{articleNews.title}</p>

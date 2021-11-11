@@ -21,17 +21,18 @@ export const NewsCategoriesForm: React.FC<Props> = ({makeFetch}) => {
     {Name:'Us', Value:'us'}, {Name:'World', Value:'world'}
   ]
 
-  const [ selectedCategory, setSelectedCategory ] = useState<string>('');
+  const [ selectedCategory, setSelectedCategory ] = useState<string>('home');
 
-  const sendCategory = () => {
-    console.log()
+  const sendCategory = (event: { preventDefault: () => void; }): void => {
+    event.preventDefault()
+    console.log(selectedCategory)
   }
 
   
   return (
     <div className="NewsCategoriesForm">
       <form className="categories-form">
-        <select>
+        <select onChange={(event) => setSelectedCategory(event.target.value)}>
           {newsCategory.map(list => (
             <option value={list.Value}>
               {list.Name}
