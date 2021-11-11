@@ -51,7 +51,6 @@ export const Home: React.FC<Props> = ({searchedNews}) => {
       // </div>
       <NewsCardContainer searchedNews={searchedNews}/>
     );
-    // <p>Test</p>
   }
   return (
     <Loading />
