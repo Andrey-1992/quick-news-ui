@@ -21,6 +21,8 @@ export const NewsCategoriesForm: React.FC<Props> = ({makeFetch}) => {
     {Name:'Us', Value:'us'}, {Name:'World', Value:'world'}
   ]
 
+  const [ selectedCategory, setSelectedCategory ] = useState<string>('');
+
   const sendCategory = () => {
     console.log()
   }
