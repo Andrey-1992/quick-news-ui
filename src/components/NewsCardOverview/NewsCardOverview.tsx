@@ -22,13 +22,24 @@ interface Article {
   short_url?: string
 }
 
+interface MultimediaInfo {
+  caption: string
+  copyright: string
+  format: string
+  height: number
+  subtype: string
+  type: string
+  url: string
+  width: number
+}
+
 interface Props {
   articleNews: Article
   changeViewStatus: (viewStatus: string, articleTitle?: string) => void
 }
 
 export const NewsCardOverview: React.FC<Props> = ({articleNews, changeViewStatus}) => {
-  // console.log(articleNews)
+  console.log(articleNews.multimedia)
   let articleNaming = articleNews.title
   const sendStatus = ():void => {
       changeViewStatus('overview', articleNaming)
@@ -39,6 +50,7 @@ export const NewsCardOverview: React.FC<Props> = ({articleNews, changeViewStatus
       <p>{articleNews.title}</p>
       <p>{articleNews.section}</p>
       <p>{articleNews.published_date}</p>
+      {/* <p>{articleNews.multimedia}</p> */}
       <button className="more-info-btn" onClick={sendStatus}>More info</button>
     </div>
   );
