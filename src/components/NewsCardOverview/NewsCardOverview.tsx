@@ -38,7 +38,7 @@ export const NewsCardOverview: React.FC<Props> = ({articleNews, changeViewStatus
       <p>{articleNews.title}</p>
       <p>{articleNews.section}</p>
       <p>{articleNews.published_date}</p>
-      <button className="more-info-btn">More info</button>
+      <button className="more-info-btn" onClick={sendStatus}>More info</button>
     </div>
   );
 }

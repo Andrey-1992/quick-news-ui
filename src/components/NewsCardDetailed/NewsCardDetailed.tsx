@@ -28,7 +28,11 @@ interface Props {
 }
 
 export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus}) => {
-  console.log(articleNews)
+  // console.log(articleNews)
+  const sendStatus = ():void => {
+    changeViewStatus('detailed')
+  }
+
   return (
     <div className="NewsCardDetailed">
       <p>{articleNews.title}</p>
@@ -41,7 +45,7 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus
         <a href={articleNews.url} target="_blank">Read Article</a>
       </button>
       <button className='save-btn'>Save Article</button>
-      <button className='back-home-btn'>Back Home</button>
+      <button className='back-home-btn' onClick={sendStatus}>Back Home</button>
     </div>
   );
 }
