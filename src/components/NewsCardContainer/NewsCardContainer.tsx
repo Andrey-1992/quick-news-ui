@@ -1,7 +1,8 @@
 import './NewsCardContainer.css';
 import React from 'react';
-import { NewsCardDetailed } from '../NewsCardDetailed/NewsCardDetailed';
 import { Loading } from '../Loading/Loading';
+import { NewsCardDetailed } from '../NewsCardDetailed/NewsCardDetailed';
+import { NewsCardOverview } from '../NewsCardOverview/NewsCardOverview';
 
 interface NewsInfoApi {
   status?: string
