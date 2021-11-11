@@ -42,10 +42,12 @@ interface Props {
 export const NewsCardContainer: React.FC<Props> = ({searchedNews}) => {
   if (searchedNews) {
     const resultArray = searchedNews.results
-    const newsCardArray = resultArray.map(news => <NewsCardDetailed articleNews={news} />)
+    const newsCardDetail= resultArray.map(news => <NewsCardDetailed articleNews={news} />)
+    const newsCardOver= resultArray.map(news => <NewsCardOverview articleNews={news} />)
     return (
       <div className="Home">
-        {newsCardArray}
+        {newsCardDetail}
+        {newsCardOver}
       </div>
     );
   }
