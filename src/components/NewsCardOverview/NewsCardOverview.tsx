@@ -29,9 +29,9 @@ interface Props {
 
 export const NewsCardOverview: React.FC<Props> = ({articleNews, changeViewStatus}) => {
   // console.log(articleNews)
-  // const changeViewStatus = ():void => {
-  //   detailedView
-  // }
+  const sendStatus = ():void => {
+    changeViewStatus('overview')
+  }
 
   return (
     <div className="NewsCardDetailed">
