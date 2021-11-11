@@ -69,7 +69,7 @@ export const App: React.FC = () => {
       <Header makeFetch={makeFetch}/> 
       <main className="main-section">
         <Switch>
-          <Route exact path="/quick-news/:title" render={() => <Home searchedNews={searchedNews}/>}/>
+          <Route exact path="/quick-news" render={() => <Home searchedNews={searchedNews} />}/>
           <Route exact path="/saved-news" render={() => <SavedNewsContainer />}/>
           <Route path="*" render={() => <Error />}/>
         </Switch>
