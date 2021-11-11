@@ -43,14 +43,23 @@ interface Props {
 export const NewsCardContainer: React.FC<Props> = ({searchedNews}) => {
   const [ detailedView, setDetailedView ] = useState<boolean>(false)
 
+  const changeViewStatus = (viewStatus: string):void => {
+    if (viewStatus === 'overview') {
+      setDetailedView(false)
+    } else if (viewStatus === 'detailed') {
+      setDetailedView(true)
+    }  
+  }
+
   if (searchedNews) {
     const resultArray = searchedNews.results
     const newsCardDetail= resultArray.map(news => <NewsCardDetailed articleNews={news} detailedView={detailedView}/>)
     const newsCardOver= resultArray.map(news => <NewsCardOverview articleNews={news} detailedView={detailedView}/>)
     return (
       <div className="Home">
-        {newsCardDetail}
-        {newsCardOver}
+        {/* {newsCardDetail}
+        {newsCardOver} */}
+        {detailedView ? newsCardDetail : newsCardOver}
       </div>
     );
   }
