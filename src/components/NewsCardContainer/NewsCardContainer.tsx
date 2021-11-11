@@ -1,5 +1,6 @@
 import './NewsCardContainer.css';
 import React from 'react';
+import { useState } from 'react'
 import { Loading } from '../Loading/Loading';
 import { NewsCardDetailed } from '../NewsCardDetailed/NewsCardDetailed';
 import { NewsCardOverview } from '../NewsCardOverview/NewsCardOverview';
@@ -40,14 +41,34 @@ interface Props {
 }
 
 export const NewsCardContainer: React.FC<Props> = ({searchedNews}) => {
+  const [ detailedView, setDetailedView ] = useState<boolean>(true);
+  const [ articleName, setArticleName ] = useState<string | undefined>('');
+
+  const changeViewStatus = (viewStatus: string, articleTitle?: string):void => {
+    // let fakeArticle 
+    if (viewStatus === 'overview') {
+      // fakeArticle = articleTitle
+      setDetailedView(false)
+      setArticleName(articleTitle)
+      // console.log(typeof articleTitle)
+    } else if (viewStatus === 'detailed') {
+      setDetailedView(true)
+    }  
+  }
+
   if (searchedNews) {
     const resultArray = searchedNews.results
-    const newsCardDetail= resultArray.map(news => <NewsCardDetailed articleNews={news} />)
-    const newsCardOver= resultArray.map(news => <NewsCardOverview articleNews={news} />)
+    // console.log(articleName)
+    const findArticle = resultArray.filter(article => article.title === articleName);
+    const newsCardDetail= findArticle.map(news => <NewsCardDetailed articleNews={news} changeViewStatus={changeViewStatus}/>)
+    // console.log(findArticle)
+    // const newsCardDetail= resultArray.map(news => <NewsCardDetailed articleNews={news} changeViewStatus={changeViewStatus}/>)
+    const newsCardOver= resultArray.map(news => <NewsCardOverview articleNews={news} changeViewStatus={changeViewStatus}/>)
     return (
       <div className="Home">
-        {newsCardDetail}
-        {newsCardOver}
+        {/* {newsCardDetail}
+        {newsCardOver} */}
+        {!detailedView ? newsCardDetail : newsCardOver}
       </div>
     );
   }

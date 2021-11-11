@@ -24,16 +24,22 @@ interface Article {
 
 interface Props {
   articleNews: Article
+  changeViewStatus: (viewStatus: string, articleTitle?: string) => void
 }
 
-export const NewsCardOverview: React.FC<Props> = ({articleNews}) => {
+export const NewsCardOverview: React.FC<Props> = ({articleNews, changeViewStatus}) => {
   // console.log(articleNews)
+  let articleNaming = articleNews.title
+  const sendStatus = ():void => {
+      changeViewStatus('overview', articleNaming)
+  }
+
   return (
     <div className="NewsCardDetailed">
       <p>{articleNews.title}</p>
       <p>{articleNews.section}</p>
       <p>{articleNews.published_date}</p>
-      <button className="more-info-btn">More info</button>
+      <button className="more-info-btn" onClick={sendStatus}>More info</button>
     </div>
   );
 }
