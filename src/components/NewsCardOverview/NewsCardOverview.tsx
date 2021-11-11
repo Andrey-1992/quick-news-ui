@@ -1,5 +1,6 @@
 import './NewsCardOverview.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
 interface Article {
   section?: string
   subsection?: string
@@ -39,7 +40,7 @@ interface Props {
 }
 
 export const NewsCardOverview: React.FC<Props> = ({articleNews, changeViewStatus}) => {
-  console.log(articleNews.multimedia[0].url)
+  // console.log(articleNews.multimedia[0].url)
   let articleNaming = articleNews.title
   const sendStatus = ():void => {
       changeViewStatus('overview', articleNaming)

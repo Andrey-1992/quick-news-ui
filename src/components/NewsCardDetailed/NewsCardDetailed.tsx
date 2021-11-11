@@ -46,6 +46,7 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus
 
   return (
     <div className="NewsCardDetailed">
+       <img src={articleNews.multimedia[0].url} alt={articleNews.multimedia[0].caption} width="500" height="600"></img>
       <p>{articleNews.title}</p>
       <p>{articleNews.abstract}</p>
       <p>{articleNews.byline}</p>
