@@ -53,7 +53,9 @@ export const NewsCardOverview: React.FC<Props> = ({articleNews, changeViewStatus
       <p>{articleNews.section}</p>
       <p>{articleNews.published_date}</p>
       {/* <p>{articleNews.multimedia}</p> */}
+      <Link to={`/quick-news/${'categories'}`}>
       <button className="more-info-btn" onClick={sendStatus}>More info</button>
+      </Link>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import './NewsCategoriesForm.css';
 import React from 'react';
-import { useState } from 'react'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 interface Props {
@@ -40,7 +41,9 @@ export const NewsCategoriesForm: React.FC<Props> = ({makeFetch}) => {
             </option>
           ))}
         </select>
-        <button onClick={sendCategory}>Search </button>
+        {/* <Link to={`/quick-news/${articleNews.title}`}> */}
+          <button onClick={sendCategory}>Search </button>
+        {/* </Link> */}
       </form>
     </div>
   );
