@@ -1,7 +1,11 @@
 import './NewsCategoriesForm.css';
 import React from 'react';
 
-export const NewsCategoriesForm: React.FC = () => {
+interface Props {
+  makeFetch: (searchedCategory: string) => void;
+}
+
+export const NewsCategoriesForm: React.FC<Props> = ({makeFetch}) => {
   const newsCategory = [
     {Name:'Select a field', Value:''}, {Name:'Arts', Value:'arts'}, {Name:'Automobiles', Value:'automobiles'}, {Name:'Books', Value:'books'}, 
     {Name:'Business', Value:'business'}, {Name:'Fashion', Value:'fashion'}, {Name:'Food', Value:'food'},
@@ -15,6 +19,10 @@ export const NewsCategoriesForm: React.FC = () => {
     {Name:'Us', Value:'us'}, {Name:'World', Value:'world'}
   ]
 
+  const sendCategory = () => {
+    console.log()
+  }
+
   
   return (
     <div className="NewsCategoriesForm">
@@ -26,7 +34,7 @@ export const NewsCategoriesForm: React.FC = () => {
             </option>
           ))}
         </select>
-        <button>Search </button>
+        <button onClick={sendCategory}>Search </button>
       </form>
     </div>
   );
