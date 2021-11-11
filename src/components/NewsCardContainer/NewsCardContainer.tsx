@@ -1,5 +1,6 @@
 import './NewsCardContainer.css';
 import React from 'react';
+import { useState } from 'react'
 import { Loading } from '../Loading/Loading';
 import { NewsCardDetailed } from '../NewsCardDetailed/NewsCardDetailed';
 import { NewsCardOverview } from '../NewsCardOverview/NewsCardOverview';
