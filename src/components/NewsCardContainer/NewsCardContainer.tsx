@@ -42,13 +42,14 @@ export const NewsCardContainer: React.FC<Props> = ({searchedNews}) => {
   if (searchedNews) {
     // console.log(searchedNews)
     const resultArray = searchedNews.results
-    const newsCardArray = resultArray.map(news => <NewsCardDetailed searchedNews={searchedNews} />)
+    const newsCardArray = resultArray.map(news => <NewsCardDetailed articleNews={news} />)
     console.log(newsCardArray)
     return (
       <div className="Home">
         {/* <p>{resultArray[0].url}</p> */}
-        {resultArray.map(news => <p>{news.title}</p>)}
+        {/* {resultArray.map(news => <p>{news.title}</p>)} */}
         {/* <p>Test</p> */}
+        {newsCardArray}
       </div>
     );
   }

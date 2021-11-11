@@ -1,14 +1,14 @@
 import './NewsCardDetailed.css';
 import React from 'react';
 
-interface NewsInfoApi {
-  status?: string
-  copyright?: string
-  section?: string
-  last_updated?: string
-  num_results?: number
-  results: Array<Article>
-}
+// interface NewsInfoApi {
+//   status?: string
+//   copyright?: string
+//   section?: string
+//   last_updated?: string
+//   num_results?: number
+//   results: Array<Article>
+// }
 
 interface Article {
   section?: string
@@ -33,13 +33,14 @@ interface Article {
 }
 
 interface Props {
-  searchedNews?: NewsInfoApi
+  articleNews: Article
 }
 
-export const NewsCardDetailed: React.FC<Props> = ({searchedNews}) => {
+export const NewsCardDetailed: React.FC<Props> = ({articleNews}) => {
+  console.log(articleNews)
   return (
     <div className="NewsCardDetailed">
-      <p>NewsCardDetailed</p>
+      <p>{articleNews.title}</p>
     </div>
   );
 }
