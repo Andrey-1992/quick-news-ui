@@ -45,8 +45,8 @@ export const NewsCardContainer: React.FC<Props> = ({searchedNews}) => {
 
   if (searchedNews) {
     const resultArray = searchedNews.results
-    const newsCardDetail= resultArray.map(news => <NewsCardDetailed articleNews={news} />)
-    const newsCardOver= resultArray.map(news => <NewsCardOverview articleNews={news} />)
+    const newsCardDetail= resultArray.map(news => <NewsCardDetailed articleNews={news} detailedView={detailedView}/>)
+    const newsCardOver= resultArray.map(news => <NewsCardOverview articleNews={news} detailedView={detailedView}/>)
     return (
       <div className="Home">
         {newsCardDetail}
