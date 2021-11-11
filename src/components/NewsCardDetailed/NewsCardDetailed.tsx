@@ -24,9 +24,10 @@ interface Article {
 
 interface Props {
   articleNews: Article
+  detailedView: boolean
 }
 
-export const NewsCardDetailed: React.FC<Props> = ({articleNews}) => {
+export const NewsCardDetailed: React.FC<Props> = ({articleNews, detailedView}) => {
   console.log(articleNews)
   return (
     <div className="NewsCardDetailed">
