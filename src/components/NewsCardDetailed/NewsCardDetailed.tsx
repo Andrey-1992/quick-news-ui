@@ -1,15 +1,5 @@
 import './NewsCardDetailed.css';
 import React from 'react';
-
-// interface NewsInfoApi {
-//   status?: string
-//   copyright?: string
-//   section?: string
-//   last_updated?: string
-//   num_results?: number
-//   results: Array<Article>
-// }
-
 interface Article {
   section?: string
   subsection?: string
