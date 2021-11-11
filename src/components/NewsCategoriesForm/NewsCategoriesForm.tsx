@@ -1,5 +1,7 @@
 import './NewsCategoriesForm.css';
 import React from 'react';
+import { useState } from 'react'
+
 
 interface Props {
   makeFetch: (searchedCategory: string) => void;
