@@ -27,7 +27,7 @@ interface Props {
 }
 
 export const NewsCardDetailed: React.FC<Props> = ({articleNews}) => {
-  // console.log(articleNews)
+  console.log(articleNews)
   return (
     <div className="NewsCardDetailed">
       <p>{articleNews.title}</p>
@@ -35,6 +35,9 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews}) => {
       <p>{articleNews.byline}</p>
       <p>{articleNews.published_date}</p>
       <p>{articleNews.url}</p>
+      <button className='save-btn'>Save Article</button>
+      <button className='read-article-btn'>Read Article</button>
+      <button className='back-home-btn'>Back home</button>
     </div>
   );
 }
