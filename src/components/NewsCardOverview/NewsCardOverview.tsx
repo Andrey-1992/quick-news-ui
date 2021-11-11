@@ -1,4 +1,4 @@
-import './NewsCardDetailed.css';
+import './NewsCardOverview.css';
 import React from 'react';
 interface Article {
   section?: string
@@ -26,21 +26,14 @@ interface Props {
   articleNews: Article
 }
 
-export const NewsCardDetailed: React.FC<Props> = ({articleNews}) => {
-  console.log(articleNews)
+export const NewsCardOverview: React.FC<Props> = ({articleNews}) => {
+  // console.log(articleNews)
   return (
     <div className="NewsCardDetailed">
       <p>{articleNews.title}</p>
-      <p>{articleNews.abstract}</p>
-      <p>{articleNews.byline}</p>
-      <p>{articleNews.published_date}</p>
       <p>{articleNews.section}</p>
-      <p>{articleNews.url}</p>
-      <button className='read-article-btn'>
-        <a href={articleNews.url} target="_blank">Read Article</a>
-      </button>
-      <button className='save-btn'>Save Article</button>
-      <button className='back-home-btn'>Back Home</button>
+      <p>{articleNews.published_date}</p>
+      <button className="more-info-btn">More info</button>
     </div>
   );
 }

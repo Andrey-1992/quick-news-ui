@@ -1,7 +1,8 @@
 import './NewsCardContainer.css';
 import React from 'react';
-import { NewsCardDetailed } from '../NewsCardDetailed/NewsCardDetailed';
 import { Loading } from '../Loading/Loading';
+import { NewsCardDetailed } from '../NewsCardDetailed/NewsCardDetailed';
+import { NewsCardOverview } from '../NewsCardOverview/NewsCardOverview';
 
 interface NewsInfoApi {
   status?: string
@@ -40,16 +41,13 @@ interface Props {
 
 export const NewsCardContainer: React.FC<Props> = ({searchedNews}) => {
   if (searchedNews) {
-    // console.log(searchedNews)
     const resultArray = searchedNews.results
-    const newsCardArray = resultArray.map(news => <NewsCardDetailed articleNews={news} />)
-    console.log(newsCardArray)
+    const newsCardDetail= resultArray.map(news => <NewsCardDetailed articleNews={news} />)
+    const newsCardOver= resultArray.map(news => <NewsCardOverview articleNews={news} />)
     return (
       <div className="Home">
-        {/* <p>{resultArray[0].url}</p> */}
-        {/* {resultArray.map(news => <p>{news.title}</p>)} */}
-        {/* <p>Test</p> */}
-        {newsCardArray}
+        {newsCardDetail}
+        {newsCardOver}
       </div>
     );
   }

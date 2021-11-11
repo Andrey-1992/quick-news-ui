@@ -1,7 +1,13 @@
 import './NewsCategoriesForm.css';
 import React from 'react';
+import { useState } from 'react'
 
-export const NewsCategoriesForm: React.FC = () => {
+
+interface Props {
+  makeFetch: (searchedCategory: string) => void;
+}
+
+export const NewsCategoriesForm: React.FC<Props> = ({makeFetch}) => {
   const newsCategory = [
     {Name:'Select a field', Value:''}, {Name:'Arts', Value:'arts'}, {Name:'Automobiles', Value:'automobiles'}, {Name:'Books', Value:'books'}, 
     {Name:'Business', Value:'business'}, {Name:'Fashion', Value:'fashion'}, {Name:'Food', Value:'food'},
@@ -15,25 +21,27 @@ export const NewsCategoriesForm: React.FC = () => {
     {Name:'Us', Value:'us'}, {Name:'World', Value:'world'}
   ]
 
+  const [ selectedCategory, setSelectedCategory ] = useState<string>('home');
+
+  const sendCategory = (event: { preventDefault: () => void; }): void => {
+    event.preventDefault()
+    console.log(selectedCategory)
+    makeFetch(selectedCategory);
+  }
+
   
   return (
     <div className="NewsCategoriesForm">
       <form className="categories-form">
-        <select>
+        <select onChange={(event) => setSelectedCategory(event.target.value)}>
           {newsCategory.map(list => (
             <option value={list.Value}>
               {list.Name}
             </option>
           ))}
         </select>
-        <button>Search </button>
+        <button onClick={sendCategory}>Search </button>
       </form>
     </div>
   );
 }
-
-
-/*
-arts, automobiles, books, business, fashion, food, health, home, insider, magazine, movies, nyregion, obituaries, opinion, politics, realestate, 
-science, sports, sundayreview, technology, theater, t-magazine, travel, upshot, us, world
-*/

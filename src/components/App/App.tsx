@@ -46,10 +46,11 @@ export const App: React.FC = () => {
     makeFetch('home')
   }, [])
 
-  const makeFetch = (searchedCategory: string) => {
+  const makeFetch = (searchedCategory: string): void => {
     fetchTopStories(searchedCategory)
     .then(data => setSearchedNews(data))
     // .then(data => console.log(data))
+    .catch(error => console.log(error))
   }
 
   return (
