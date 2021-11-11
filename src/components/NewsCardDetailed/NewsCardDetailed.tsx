@@ -24,7 +24,7 @@ interface Article {
 
 interface Props {
   articleNews: Article
-  changeViewStatus: (viewStatus: string) => void
+  changeViewStatus: (viewStatus: string, articleTitle?: string) => void
 }
 
 export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus}) => {

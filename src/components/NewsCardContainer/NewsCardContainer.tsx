@@ -41,10 +41,11 @@ interface Props {
 }
 
 export const NewsCardContainer: React.FC<Props> = ({searchedNews}) => {
-  const [ detailedView, setDetailedView ] = useState<boolean>(false)
+  const [ detailedView, setDetailedView ] = useState<boolean>(true)
 
-  const changeViewStatus = (viewStatus: string):void => {
+  const changeViewStatus = (viewStatus: string, articleTitle?: string):void => {
     if (viewStatus === 'overview') {
+      console.log(articleTitle)
       setDetailedView(false)
     } else if (viewStatus === 'detailed') {
       setDetailedView(true)
@@ -59,7 +60,7 @@ export const NewsCardContainer: React.FC<Props> = ({searchedNews}) => {
       <div className="Home">
         {/* {newsCardDetail}
         {newsCardOver} */}
-        {detailedView ? newsCardDetail : newsCardOver}
+        {!detailedView ? newsCardDetail : newsCardOver}
       </div>
     );
   }
