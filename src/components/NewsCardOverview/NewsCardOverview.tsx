@@ -1,4 +1,4 @@
-import './NewsCardDetailed.css';
+import './NewsCardOverview.css';
 import React from 'react';
 interface Article {
   section?: string
@@ -26,7 +26,7 @@ interface Props {
   articleNews: Article
 }
 
-export const NewsCardDetailed: React.FC<Props> = ({articleNews}) => {
+export const NewsCardOverview: React.FC<Props> = ({articleNews}) => {
   // console.log(articleNews)
   return (
     <div className="NewsCardDetailed">
