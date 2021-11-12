@@ -10,7 +10,7 @@ interface Props {
 export const NavBar: React.FC<Props> = ({makeFetch}) => {
   return (
     <div className="nav-bar">
-      <Link className='go-home' to="/quick-news">
+      <Link className='go-home' to="/">
         <p className="nav-buttons">Home</p>
       </Link>
       <Link className='go-saved-news' to="/saved-news">

@@ -45,15 +45,10 @@ export const NewsCardOverview: React.FC<Props> = ({articleNews, changeViewStatus
       changeViewStatus('overview', articleNaming)
   }
 
-  const sectionStyle = {
-    width: "100%",
-    height: "400px",
-  };
-
   return (
-    <div className="news-card-overview" style={{  backgroundSize:"72%", backgroundPosition: "center", backgroundImage: `url(${articleNews.multimedia[0].url})` }}>
+    <div className="news-card-overview" style={{  backgroundSize:"100%", backgroundPosition: "center", backgroundImage: `url(${articleNews.multimedia[0].url})` }}>
       <div className="info-card-overview">
-        <h3 className="overview-text">{articleNews.title}</h3>
+        <h2 className="overview-text">{articleNews.title}</h2>
         <p className="overview-text">Category #{articleNews.section}</p>
         <button className="more-info-btn" onClick={sendStatus}>More info</button>
       </div>
