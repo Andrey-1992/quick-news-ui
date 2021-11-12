@@ -1,5 +1,7 @@
 # M4 Takehome (Quick News)
 
+## [View this deployed app in action](https://quick-news-ui.herokuapp.com/)
+
 ### Table of Contents
 - [Overview](#overview)
 - [Features](#features)
