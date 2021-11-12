@@ -2,4 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   /* grid-gap: 1%; */
+  /* background-color: rgb(70, 72, 72);
+  padding-top: 2%; */
+  background-color: whitesmoke;
 }
