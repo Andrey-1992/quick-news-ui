@@ -10,3 +10,16 @@
   opacity: 0.5;
   margin: 25% 2% 0.5% 2%;
 }
+
+.overview-text {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h3 {
+  padding-top: 5%;
+}
+
+.more-info-btn {
+  background-color: rgb(145, 167, 199);
+  margin-bottom: 2%;
+}
