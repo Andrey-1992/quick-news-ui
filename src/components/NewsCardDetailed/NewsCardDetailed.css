@@ -24,3 +24,14 @@
 .card-detailed-text:hover {
   opacity: 0.70;
 }
+
+.card-detailed-btns {
+  margin: 2%;
+  margin-bottom: 2%;
+  color: black;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: medium;
+  font-weight: 600;
+  border: solid black 3px;
+  border-radius: 1%;
+}
