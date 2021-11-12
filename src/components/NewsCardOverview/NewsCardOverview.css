@@ -1,11 +1,11 @@
-.news-card-detailed {
+.news-card-overview {
   /* height: 10%; */
   margin: 2%;
   border: solid hsl(258, 72%, 41%) 5px;
   border-radius: 3%;
 }
 
-.news-card-detailed:hover {
+.news-card-overview:hover {
   cursor: pointer;
   transform: scale(1.02);
   transition: all 0.2s ease-in-out 0s;

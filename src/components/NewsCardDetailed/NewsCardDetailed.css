@@ -1,0 +1,6 @@
+.news-card-detailed {
+  grid-column-start: 2;
+  background-color: whitesmoke;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-top: 3%;
+}
