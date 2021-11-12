@@ -53,7 +53,7 @@ export const NewsCardOverview: React.FC<Props> = ({articleNews, changeViewStatus
   };
 
   return (
-    <div className="news-card-detailed" style={{ position: "relative", width: "100%", height: "auto", backgroundImage: `url(${articleNews.multimedia[0].url})` }}>
+    <div className="news-card-detailed" style={{ position: "relative", width: "95%", height: "auto", backgroundImage: `url(${articleNews.multimedia[0].url})` }}>
       {/* <img src={articleNews.multimedia[0].url} alt={articleNews.multimedia[0].caption} width="500" height="600"></img> */}
       <div className="info-card-overview">
         <h3 className="overview-text">{articleNews.title}</h3>
