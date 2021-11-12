@@ -1,4 +1,10 @@
 .news-card-detailed {
   /* height: 10%; */
-  margin: 5%;
+  margin: 2%;
+}
+
+.info-card-overview {
+  background-color: aliceblue;
+  opacity: 0.5;
+  margin: 25% 2% 0.5% 2%;
 }

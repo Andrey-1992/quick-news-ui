@@ -49,9 +49,11 @@ export const NewsCardOverview: React.FC<Props> = ({articleNews, changeViewStatus
   return (
     <div className="news-card-detailed" style={{ backgroundImage: `url(${articleNews.multimedia[0].url})` }}>
       {/* <img src={articleNews.multimedia[0].url} alt={articleNews.multimedia[0].caption} width="500" height="600"></img> */}
-      <p>{articleNews.title}</p>
-      <p>{articleNews.section}</p>
-      <button className="more-info-btn" onClick={sendStatus}>More info</button>
+      <div className="info-card-overview">
+        <p>{articleNews.title}</p>
+        <p>Category #{articleNews.section}</p>
+        <button className="more-info-btn" onClick={sendStatus}>More info</button>
+      </div>
     </div>
   );
 }
