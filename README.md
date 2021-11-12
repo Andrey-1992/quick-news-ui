@@ -53,7 +53,6 @@ Run `npm install`
 
 Run `npm start`
 
-For testing, run `npm run cypress`
 
 ## Technologies
 <p align="left">
