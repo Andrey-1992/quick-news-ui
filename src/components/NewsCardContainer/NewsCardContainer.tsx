@@ -72,7 +72,7 @@ export const NewsCardContainer: React.FC<Props> = ({searchedNews}) => {
     // const newsCardDetail= resultArray.map(news => <NewsCardDetailed articleNews={news} changeViewStatus={changeViewStatus}/>)
     const newsCardOver= resultArray.map(news => <NewsCardOverview articleNews={news} changeViewStatus={changeViewStatus}/>)
     return (
-      <div className="Home">
+      <div className="home">
         {!detailedView ? newsCardDetail : newsCardOver}
       </div>
     );
