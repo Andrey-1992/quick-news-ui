@@ -5,6 +5,7 @@
   margin-top: 3%;
   border: solid teal 5px;
   border-radius: 3%;
+  overflow: auto;
 }
 
 .news-card-detailed:hover {
