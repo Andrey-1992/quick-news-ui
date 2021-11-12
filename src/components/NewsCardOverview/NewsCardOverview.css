@@ -1,7 +1,7 @@
 .news-card-overview {
   /* height: 10%; */
   margin: 2%;
-  border: solid hsl(258, 72%, 41%) 5px;
+  border: solid teal 5px;
   border-radius: 3%;
 }
 
@@ -13,14 +13,14 @@
 
 .info-card-overview {
   background-color: aliceblue;
-  opacity: 0.5;
+  opacity: 0.6;
   margin: 25% 2% 0.5% 2%;
 }
 
 .info-card-overview:hover {
-  background-color: hsl(258, 72%, 41%);
-  opacity: 0.5;
-  color: whitesmoke;
+  background-color: teal;
+  opacity: 0.8;
+  color: azure;
   opacity: 0.8;
 }
 
