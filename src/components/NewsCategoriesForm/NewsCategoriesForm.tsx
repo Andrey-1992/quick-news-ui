@@ -26,7 +26,6 @@ export const NewsCategoriesForm: React.FC<Props> = ({makeFetch}) => {
 
   const sendCategory = (event: { preventDefault: () => void; }): void => {
     event.preventDefault()
-    // console.log(selectedCategory)
     makeFetch(selectedCategory);
   }
 

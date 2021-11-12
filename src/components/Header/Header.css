@@ -14,3 +14,14 @@ h1 {
   font-size: 400%;
   color: azure;
 }
+
+@media screen and (max-width: 950px) {
+  .header {
+    flex-direction: column;
+  }
+   h1 {
+     margin: 0;
+     padding-left: 15%;
+     width: 70%;
+   }
+}

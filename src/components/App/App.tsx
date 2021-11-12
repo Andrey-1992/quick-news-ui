@@ -60,7 +60,6 @@ export const App: React.FC = () => {
   const makeFetch = (searchedCategory: string): void => {
     fetchTopStories(searchedCategory)
     .then(data => setSearchedNews(data))
-    // .then(data => console.log(data))
     .catch(error => console.log(error))
   }
 
@@ -69,7 +68,7 @@ export const App: React.FC = () => {
       <Header makeFetch={makeFetch}/> 
       <main className="main-section">
         <Switch>
-          <Route exact path="/quick-news" render={() => <Home searchedNews={searchedNews} />}/>
+          <Route exact path="/" render={() => <Home searchedNews={searchedNews} />}/>
           <Route exact path="/saved-news" render={() => <SavedNewsContainer />}/>
           <Route path="*" render={() => <Error />}/>
         </Switch>

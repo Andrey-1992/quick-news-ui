@@ -40,7 +40,6 @@ interface Props {
 }
 
 export const NewsCardOverview: React.FC<Props> = ({articleNews, changeViewStatus}) => {
-  // console.log(articleNews.multimedia[0].url)
   let articleNaming = articleNews.title
   const sendStatus = ():void => {
       changeViewStatus('overview', articleNaming)
@@ -49,12 +48,10 @@ export const NewsCardOverview: React.FC<Props> = ({articleNews, changeViewStatus
   const sectionStyle = {
     width: "100%",
     height: "400px",
-    // backgroundImage: url(${`articleNews.multimedia[0].url`)
   };
 
   return (
     <div className="news-card-overview" style={{  backgroundSize:"72%", backgroundPosition: "center", backgroundImage: `url(${articleNews.multimedia[0].url})` }}>
-      {/* <img src={articleNews.multimedia[0].url} alt={articleNews.multimedia[0].caption} width="500" height="600"></img> */}
       <div className="info-card-overview">
         <h3 className="overview-text">{articleNews.title}</h3>
         <p className="overview-text">Category #{articleNews.section}</p>
