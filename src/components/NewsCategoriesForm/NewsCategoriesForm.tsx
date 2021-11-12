@@ -32,7 +32,7 @@ export const NewsCategoriesForm: React.FC<Props> = ({makeFetch}) => {
 
   
   return (
-    <div className="NewsCategoriesForm">
+    <div className="news-categories-form">
       <form className="categories-form">
         <select onChange={(event) => setSelectedCategory(event.target.value)}>
           {newsCategory.map(list => (
