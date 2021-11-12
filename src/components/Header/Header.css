@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   background-color: teal;
-
+  border: solid azure 5px;
+  margin-bottom: 1%;
 }
 
 h1 {
