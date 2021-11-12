@@ -1,6 +1,8 @@
 .news-card-detailed {
   /* height: 10%; */
   margin: 2%;
+  border: solid hsl(258, 72%, 41%) 5px;
+  border-radius: 3%;
 }
 
 .info-card-overview {
