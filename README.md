@@ -30,11 +30,14 @@ This project was created for the Mod 4 Take Home Challenge. We were given a mini
 
 #### Desktop View
 <img width="1438" alt="Deskptop view - Home Window (Quick Start)" src="https://user-images.githubusercontent.com/78002374/141506772-d6fbf9b4-4722-48b2-93f4-2e209a8c4eb5.png">
-![Mobile view - Full Article Window (Quick Start)](https://user-images.githubusercontent.com/78002374/141507401-de528ca2-3351-4d2d-a172-54d20ec7b926.png)
+
 
 
 #### Mobile View
 <img width="495" alt="Mobile view - Home Window (Quick Start)" src="https://user-images.githubusercontent.com/78002374/141506802-3b26f628-d061-4fad-be83-a0856b99a002.png">
+
+<img width="494" alt="Screen Shot 2021-11-12 at 10 17 17 AM" src="https://user-images.githubusercontent.com/78002374/141507899-a9a6150c-90a6-4e6e-a290-a9b781aca747.png">
+
 
 
 
