@@ -3,7 +3,7 @@
 ### Table of Contents
 - [Overview](#overview)
 - [Features](#features)
-- [In use](#in-use)
+- [Dashboard](#dashboard)
 - [Set up](#set-up)
 - [Technologies](#technologies)
 - [Contributors](#contributors)
@@ -28,6 +28,8 @@ This project was created for the Mod 4 Take Home Challenge. We were given a mini
 - Responsive design for use across desktop, tablet, and mobile devices
 - WAVE and Lighthouse audit compliant
 
+
+## Dashboard
 #### Desktop View
 <img width="1438" alt="Deskptop view - Home Window (Quick Start)" src="https://user-images.githubusercontent.com/78002374/141506772-d6fbf9b4-4722-48b2-93f4-2e209a8c4eb5.png">
 
