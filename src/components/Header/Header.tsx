@@ -11,7 +11,7 @@ export const Header: React.FC<Props> = ({makeFetch}) => {
   console.log(currentTime)
 
   return (
-    <div className="Header">
+    <div className="header">
       <div className="project-tittle">
         <h1>Quick News</h1>
         {/* <p>{currentTime}</p> */}
