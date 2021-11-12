@@ -35,3 +35,9 @@
   border: solid black 3px;
   border-radius: 1%;
 }
+
+.card-detailed-btns:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out 0s;
+}
