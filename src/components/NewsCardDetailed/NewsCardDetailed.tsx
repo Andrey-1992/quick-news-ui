@@ -50,7 +50,7 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus
       <h2>{articleNews.title}</h2>
       <p>{articleNews.abstract}</p>
       <h4>{articleNews.byline}</h4>
-      <p>{articleNews.published_date}</p>
+      {/* <p>{articleNews.published_date}</p> */}
       <p>Category #{articleNews.section}</p>
       <button className='read-article-btn'>
         <a href={articleNews.url} target="_blank">Read Article</a>
