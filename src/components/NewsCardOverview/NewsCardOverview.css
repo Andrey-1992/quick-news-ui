@@ -20,6 +20,8 @@ h3 {
 }
 
 .more-info-btn {
-  background-color: rgb(145, 167, 199);
+  background-color: #463450;
   margin-bottom: 2%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: aliceblue;
 }
