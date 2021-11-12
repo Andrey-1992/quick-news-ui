@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+# M4 Takehome (Quick News)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [In use](#in-use)
+- [Set up](#set-up)
+- [Technologies](#technologies)
+- [Contributors](#contributors)
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This project was created for the Mod 4 Take Home Challenge. We were given a minimum set of requirements to incorporate into an MVP for this application. The requirements are as follows:
 
-### `yarn start`
+- A list of articles
+- A “detailed” view for each article (as opposed to summary/list view)
+- Articles in the list must link to the detailed article view you create
+- Some sort of search, filter, OR sort
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Features
 
-### `yarn test`
+- UI that accesses data from [NYT Top Articles API](https://developer.nytimes.com/docs/top-stories-product/1/overview) to provide a condensed news-reading experience for the User
+- On visiting, the site displays the current date and the top articles from across all categories
+- A User can click on an individual article's "Read more" button and get a detailed view of that article, along with a link to the full one
+- Users can choose a news category of their choice and have the application load relevant articles
+- Error handling for invalid URLs, too many requests, and server errors
+- Responsive design for use across desktop, tablet, and mobile devices
+- WAVE and Lighthouse audit compliant
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Desktop View
+<img width="1438" alt="Deskptop view - Home Window (Quick Start)" src="https://user-images.githubusercontent.com/78002374/141506772-d6fbf9b4-4722-48b2-93f4-2e209a8c4eb5.png">
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Mobile View
+<img width="495" alt="Mobile view - Home Window (Quick Start)" src="https://user-images.githubusercontent.com/78002374/141506802-3b26f628-d061-4fad-be83-a0856b99a002.png">
+![Mobile view - Full Article Window (Quick Start)](https://user-images.githubusercontent.com/78002374/141506811-9ee31e9d-8361-45f0-9ff5-dd5804aa9e3a.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Accessiblity Test
+<img width="567" alt="Lighthouse Accessiblity (Quick News)" src="https://user-images.githubusercontent.com/78002374/141506824-c49729d4-4572-4b3d-a8c2-438f79630bfa.png">
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Set Up
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Clone this repo down, and `cd` into it.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Run `npm install`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Run `npm start`
 
-## Learn More
+For testing, run `npm run cypress`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies
+<p align="left">
+  <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="javascript" />
+  <img src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" alt="html5"/>
+  <img src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
+  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="Github" />
+</p>
+<p align="left">
+  <img src="https://img.shields.io/badge/-React-cyan" alt="React" />
+  <img src="https://img.shields.io/badge/-React%20Router-CA4245?logo=react-router" alt="React Router" />
+</p>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributors
+**Andrey Bermudez**
+- [Github](https://github.com/Andrey-1992)
+- [LinkedIn](https://www.linkedin.com/in/andrey-bermudez-83318220b/)
+
