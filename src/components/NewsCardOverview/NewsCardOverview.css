@@ -33,8 +33,10 @@ h3 {
 }
 
 .more-info-btn {
-  background-color: #463450;
+  background-color: azure;
   margin-bottom: 2%;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: aliceblue;
+  color: black;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: medium;
+  border: solid black 3px;
 }
