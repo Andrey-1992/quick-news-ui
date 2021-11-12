@@ -1,7 +1,9 @@
 .home {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background-color: whitesmoke;
+  background-color: rgba(131, 136, 145, 0.89);
+  overflow: auto;
+  padding-bottom: 5%;
 }
 
 @media screen and (max-width: 600px) {
