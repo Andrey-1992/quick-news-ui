@@ -1,9 +1,27 @@
 .header {
   display: flex;
   justify-content: space-between;
+  background-color: teal;
 }
 
 h1 {
-  padding-left: 5%;
+  /* padding-left: 5%; */
+  margin: 1% 1% 2% 0%;
+  padding: 3%;
   width: 190%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-size: 400%;
+  color: azure;
+}
+
+@media screen and (max-width: 950px) {
+  .header {
+    flex-direction: column;
+  }
+   h1 {
+     margin: 0;
+     padding-left: 15%;
+     width: 70%;
+   }
 }

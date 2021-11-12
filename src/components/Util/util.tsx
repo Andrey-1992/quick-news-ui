@@ -1,4 +1,9 @@
+require('dotenv').config();
+
+
 export const fetchTopStories = async (newCategory: string) => {
+  // const apiKey = process.env.NY_TIMES_API_KEY;
+  // console.log(apiKey)
   try {
     const response = await fetch(`https://api.nytimes.com/svc/topstories/v2/${newCategory}.json?api-key=gFgfPotWyeyYBbaW9U3bbLbBXrropGAx`)
     if (!response.ok || response.status === 500) {

@@ -26,7 +26,6 @@ export const NewsCategoriesForm: React.FC<Props> = ({makeFetch}) => {
 
   const sendCategory = (event: { preventDefault: () => void; }): void => {
     event.preventDefault()
-    console.log(selectedCategory)
     makeFetch(selectedCategory);
   }
 
@@ -34,15 +33,15 @@ export const NewsCategoriesForm: React.FC<Props> = ({makeFetch}) => {
   return (
     <div className="news-categories-form">
       <form className="categories-form">
-        <select onChange={(event) => setSelectedCategory(event.target.value)}>
+        <select className="option-style" onChange={(event) => setSelectedCategory(event.target.value)}>
           {newsCategory.map(list => (
-            <option value={list.Value}>
+            <option className="option-choice-style" value={list.Value}>
               {list.Name}
             </option>
           ))}
         </select>
         {/* <Link to={`/quick-news/${articleNews.title}`}> */}
-          <button onClick={sendCategory}>Search </button>
+          <button className="form-btn" onClick={sendCategory}>Search </button>
         {/* </Link> */}
       </form>
     </div>

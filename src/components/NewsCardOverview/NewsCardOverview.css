@@ -1,8 +1,8 @@
 .news-card-overview {
   /* height: 10%; */
   margin: 2%;
-  border: solid hsl(258, 72%, 41%) 5px;
-  border-radius: 3%;
+  border: solid teal 5px;
+  border-radius: 1%;
 }
 
 .news-card-overview:hover {
@@ -13,14 +13,14 @@
 
 .info-card-overview {
   background-color: aliceblue;
-  opacity: 0.5;
+  opacity: 0.6;
   margin: 25% 2% 0.5% 2%;
 }
 
 .info-card-overview:hover {
-  background-color: hsl(258, 72%, 41%);
-  opacity: 0.5;
-  color: whitesmoke;
+  background-color: teal;
+  opacity: 0.8;
+  color: azure;
   opacity: 0.8;
 }
 
@@ -33,8 +33,20 @@ h3 {
 }
 
 .more-info-btn {
-  background-color: #463450;
+  background-color: azure;
   margin-bottom: 2%;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: aliceblue;
+  color: black;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: medium;
+  font-weight: 600;
+  border: solid black 3px;
+}
+
+.more-info-btn:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+  transition: all 0.3s ease-in-out 0s;
+  border: none;
+  background-color: azure;
+  color: teal;
 }

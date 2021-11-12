@@ -1,6 +1,6 @@
 import './NavBar.css';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { NewsCategoriesForm } from '../NewsCategoriesForm/NewsCategoriesForm'
 
 interface Props {
@@ -10,12 +10,12 @@ interface Props {
 export const NavBar: React.FC<Props> = ({makeFetch}) => {
   return (
     <div className="nav-bar">
-      <NavLink className='go-home' to="/quick-news">
+      <Link className='go-home' to="/quick-news">
         <p className="nav-buttons">Home</p>
-      </NavLink>
-      <NavLink className='go-saved-news' to="/saved-news">
+      </Link>
+      <Link className='go-saved-news' to="/saved-news">
         <p className="nav-buttons">Saved News</p>
-      </NavLink>
+      </Link>
       <NewsCategoriesForm makeFetch={makeFetch}/>
     </div>
   );

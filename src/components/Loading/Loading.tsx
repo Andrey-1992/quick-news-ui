@@ -3,6 +3,9 @@ import React from 'react';
 
 export const Loading: React.FC = () => {
   return  (
-    <h2 className='loading'>Loading...</h2>
+    <div className="loading-styling">
+      <h5>Loading...</h5>
+      <img className='error-img' src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" alt="404-img"/>
+    </div>
   )
 }
