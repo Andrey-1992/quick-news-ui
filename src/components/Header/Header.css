@@ -2,13 +2,16 @@
   display: flex;
   justify-content: space-between;
   background-color: teal;
-  
+
 }
 
 h1 {
-  padding-left: 5%;
+  /* padding-left: 5%; */
+  margin: 1% 1% 2% 0%;
+  padding: 3%;
   width: 190%;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-weight: 300;
-  font-size: 250%;
+  font-weight: 400;
+  font-size: 400%;
+  color: azure;
 }
