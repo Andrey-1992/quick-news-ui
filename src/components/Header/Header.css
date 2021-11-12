@@ -1,9 +1,13 @@
 .header {
   display: flex;
   justify-content: space-between;
+  background-color: teal;
 }
 
 h1 {
   padding-left: 5%;
   width: 190%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 300;
+  font-size: 250%;
 }
