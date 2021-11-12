@@ -1,0 +1,40 @@
+.news-card-overview {
+  /* height: 10%; */
+  margin: 2%;
+  border: solid hsl(258, 72%, 41%) 5px;
+  border-radius: 3%;
+}
+
+.news-card-overview:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.info-card-overview {
+  background-color: aliceblue;
+  opacity: 0.5;
+  margin: 25% 2% 0.5% 2%;
+}
+
+.info-card-overview:hover {
+  background-color: hsl(258, 72%, 41%);
+  opacity: 0.5;
+  color: whitesmoke;
+  opacity: 0.8;
+}
+
+.overview-text {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h3 {
+  padding-top: 5%;
+}
+
+.more-info-btn {
+  background-color: #463450;
+  margin-bottom: 2%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: aliceblue;
+}

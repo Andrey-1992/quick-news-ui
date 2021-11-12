@@ -45,14 +45,13 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus
   }
 
   return (
-    <div className="NewsCardDetailed">
-       <img src={articleNews.multimedia[0].url} alt={articleNews.multimedia[0].caption} width="500" height="600"></img>
-      <p>{articleNews.title}</p>
+    <div className="news-card-detailed">
+       <img className="img-card-detailed" src={articleNews.multimedia[0].url} alt={articleNews.multimedia[0].caption} width="500" height="600"></img>
+      <h2>{articleNews.title}</h2>
       <p>{articleNews.abstract}</p>
-      <p>{articleNews.byline}</p>
-      <p>{articleNews.published_date}</p>
-      <p>{articleNews.section}</p>
-      <p>{articleNews.url}</p>
+      <h4>{articleNews.byline}</h4>
+      {/* <p>{articleNews.published_date}</p> */}
+      <p>Category #{articleNews.section}</p>
       <button className='read-article-btn'>
         <a href={articleNews.url} target="_blank">Read Article</a>
       </button>

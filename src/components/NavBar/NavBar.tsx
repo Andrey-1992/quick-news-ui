@@ -9,7 +9,7 @@ interface Props {
 
 export const NavBar: React.FC<Props> = ({makeFetch}) => {
   return (
-    <div className="NavBar">
+    <div className="nav-bar">
       <NavLink className='go-home' to="/quick-news">
         <p className="nav-buttons">Home</p>
       </NavLink>

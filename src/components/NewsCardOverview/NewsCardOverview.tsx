@@ -46,14 +46,22 @@ export const NewsCardOverview: React.FC<Props> = ({articleNews, changeViewStatus
       changeViewStatus('overview', articleNaming)
   }
 
+  const sectionStyle = {
+    width: "100%",
+    height: "400px",
+    // backgroundImage: url(${`articleNews.multimedia[0].url`)
+  };
+
   return (
-    <div className="NewsCardDetailed" style={{ backgroundImage: `url(${articleNews.multimedia[0].url})` }}>
+    <div className="news-card-overview" style={{  backgroundSize:"72%", backgroundPosition: "center", backgroundImage: `url(${articleNews.multimedia[0].url})` }}>
       {/* <img src={articleNews.multimedia[0].url} alt={articleNews.multimedia[0].caption} width="500" height="600"></img> */}
-      <p>{articleNews.title}</p>
-      <p>{articleNews.section}</p>
-      <p>{articleNews.published_date}</p>
-      {/* <p>{articleNews.multimedia}</p> */}
-      <button className="more-info-btn" onClick={sendStatus}>More info</button>
+      <div className="info-card-overview">
+        <h3 className="overview-text">{articleNews.title}</h3>
+        <p className="overview-text">Category #{articleNews.section}</p>
+        <button className="more-info-btn" onClick={sendStatus}>More info</button>
+      </div>
     </div>
   );
 }
+
+// backgroundRepeat: "no-repeat"
