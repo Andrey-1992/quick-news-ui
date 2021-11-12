@@ -42,7 +42,7 @@ export const NewsCategoriesForm: React.FC<Props> = ({makeFetch}) => {
           ))}
         </select>
         {/* <Link to={`/quick-news/${articleNews.title}`}> */}
-          <button onClick={sendCategory}>Search </button>
+          <button className="form-btn" onClick={sendCategory}>Search </button>
         {/* </Link> */}
       </form>
     </div>

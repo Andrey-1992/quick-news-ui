@@ -15,3 +15,10 @@
   padding: 1%;
   margin-right: 4%;
 }
+
+.form-btn {
+  background-color: whitesmoke;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: large;
+  margin-right: 4%;
+}
