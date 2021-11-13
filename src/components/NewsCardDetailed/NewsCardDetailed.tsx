@@ -36,12 +36,17 @@ interface MultimediaInfo {
 interface Props {
   articleNews: Article
   changeViewStatus: (viewStatus: string, articleTitle?: string) => void
+  saveToStorage: () => void
 }
 
-export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus}) => {
+export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus, saveToStorage}) => {
   // console.log(articleNews)
   const sendStatus = ():void => {
     changeViewStatus('detailed')
+  }
+
+  const saveArticle = (): void => {
+    saveToStorage()
   }
 
   return (
@@ -54,7 +59,7 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus
       <button className='card-detailed-btns'>
         <a href={articleNews.url} target="_blank">Read Article</a>
       </button>
-      <button className='card-detailed-btns'>Save Article</button>
+      <button onClick={saveArticle} className='card-detailed-btns'>Save Article</button>
       <button className='card-detailed-btns' onClick={sendStatus}>Back Home</button>
     </div>
   );
