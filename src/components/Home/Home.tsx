@@ -47,9 +47,10 @@ interface MultimediaInfo {
 
 interface Props {
   searchedNews?: NewsInfoApi
+  saveToStorage: () => void
 }
 
-export const Home: React.FC<Props> = ({searchedNews}) => {
+export const Home: React.FC<Props> = ({searchedNews, saveToStorage}) => {
   if (searchedNews) {
     return (
       <NewsCardContainer searchedNews={searchedNews}/>
