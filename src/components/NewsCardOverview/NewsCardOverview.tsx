@@ -37,11 +37,13 @@ interface MultimediaInfo {
 interface Props {
   articleNews: Article
   changeViewStatus: (viewStatus: string, articleTitle?: string) => void
+  saveToStorage: () => void
 }
 
-export const NewsCardOverview: React.FC<Props> = ({articleNews, changeViewStatus}) => {
+export const NewsCardOverview: React.FC<Props> = ({articleNews, changeViewStatus, saveToStorage}) => {
   let articleNaming = articleNews.title
   const sendStatus = ():void => {
+      saveToStorage()
       changeViewStatus('overview', articleNaming)
   }
 
