@@ -53,7 +53,7 @@ interface Props {
 export const Home: React.FC<Props> = ({searchedNews, saveToStorage}) => {
   if (searchedNews) {
     return (
-      <NewsCardContainer searchedNews={searchedNews}/>
+      <NewsCardContainer searchedNews={searchedNews} saveToStorage={saveToStorage} />
     );
   }
   return (

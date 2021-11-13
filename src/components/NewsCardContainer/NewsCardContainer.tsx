@@ -49,9 +49,10 @@ interface MultimediaInfo {
 
 interface Props {
   searchedNews?: NewsInfoApi
+  saveToStorage: () => void 
 }
 
-export const NewsCardContainer: React.FC<Props> = ({searchedNews}) => {
+export const NewsCardContainer: React.FC<Props> = ({searchedNews, saveToStorage}) => {
   const [ detailedView, setDetailedView ] = useState<boolean>(true);
   const [ articleName, setArticleName ] = useState<string | undefined>('');
 
