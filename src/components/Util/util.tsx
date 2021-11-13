@@ -1,11 +1,11 @@
-// import * as dotenv from "dotenv";
+import * as dotenv from "dotenv";
 // dotenv.config({ path:'/.env' });
 // require('dotenv').config()
 // import 'dotenv/config'
 //NYT_API_KEY=gFgfPotWyeyYBbaW9U3bbLbBXrropGAx
 // require('dotenv').config({ path: './.env' })
 // require('dotenv').config({path:'path_to_dotenv'});
-import { ENV_VAR } from "react-native-dotenv" 
+// import { ENV_VAR } from "dotenv"
 
 console.log(process.env)
 

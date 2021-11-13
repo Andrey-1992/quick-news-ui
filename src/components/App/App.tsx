@@ -12,7 +12,7 @@ interface NewsInfoApi {
   status?: string
   copyright?: string
   section?: string
-  last_updated?: string
+  last_updated: string
   num_results?: number
   results: Array<Article>
 }
@@ -51,7 +51,7 @@ interface MultimediaInfo {
 }
 
 export const App: React.FC = () => {
-  const [searchedNews, setSearchedNews] = useState<NewsInfoApi>()
+  const [searchedNews, setSearchedNews] = useState<any>()
 
   useEffect(() => {
     makeFetch('home')
@@ -63,12 +63,16 @@ export const App: React.FC = () => {
     .catch(error => console.log(error))
   }
 
+  const saveToStorage = () => {
+    localStorage.setItem(searchedNews.last_updated, JSON.stringify(searchedNews))
+  }
+
   return (
     <div className="App">
       <Header makeFetch={makeFetch}/> 
       <main className="main-section">
         <Switch>
-          <Route exact path="/" render={() => <Home searchedNews={searchedNews} />}/>
+          <Route exact path="/" render={() => <Home searchedNews={searchedNews}  saveToStorage={saveToStorage}/>}/>
           <Route exact path="/saved-news" render={() => <SavedNewsContainer />}/>
           <Route path="*" render={() => <Error />}/>
         </Switch>
