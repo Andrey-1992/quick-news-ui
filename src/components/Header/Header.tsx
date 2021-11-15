@@ -7,14 +7,15 @@ interface Props {
 }
 
 export const Header: React.FC<Props> = ({makeFetch}) => {
-  let currentTime = new Date();
-  console.log(currentTime)
+  const dateObj = new Date();
+  const dateArray = dateObj.toString().split(' ');
+  const todaysDate = dateArray.splice(1, 3).join(' / ')
 
   return (
     <div className="header">
       <div className="project-tittle">
         <h1>Quick News</h1>
-        {/* <p>{currentTime}</p> */}
+        <p className="today-date-text">{todaysDate}</p>
       </div>
       <NavBar makeFetch={makeFetch}/>
     </div>
