@@ -49,9 +49,10 @@ interface MultimediaInfo {
 
 interface Props {
   searchedNews?: NewsInfoApi
+  saveToStorage: () => void 
 }
 
-export const NewsCardContainer: React.FC<Props> = ({searchedNews}) => {
+export const NewsCardContainer: React.FC<Props> = ({searchedNews, saveToStorage}) => {
   const [ detailedView, setDetailedView ] = useState<boolean>(true);
   const [ articleName, setArticleName ] = useState<string | undefined>('');
 
@@ -67,8 +68,8 @@ export const NewsCardContainer: React.FC<Props> = ({searchedNews}) => {
   if (searchedNews) {
     const resultArray = searchedNews.results
     const findArticle = resultArray.filter(article => article.title === articleName);
-    const newsCardDetail= findArticle.map(news => <NewsCardDetailed articleNews={news} changeViewStatus={changeViewStatus}/>)
-    const newsCardOver= resultArray.map(news => <NewsCardOverview articleNews={news} changeViewStatus={changeViewStatus}/>)
+    const newsCardDetail= findArticle.map(news => <NewsCardDetailed articleNews={news} changeViewStatus={changeViewStatus} saveToStorage={saveToStorage}/>)
+    const newsCardOver= resultArray.map(news => <NewsCardOverview articleNews={news} changeViewStatus={changeViewStatus} />)
     return (
       <div className="home">
         {!detailedView ? newsCardDetail : newsCardOver}

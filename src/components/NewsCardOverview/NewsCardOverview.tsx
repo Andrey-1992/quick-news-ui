@@ -1,6 +1,5 @@
 import './NewsCardOverview.css';
 import React from 'react';
-import { Link } from 'react-router-dom';
 interface Article {
   section?: string
   subsection?: string
@@ -55,5 +54,3 @@ export const NewsCardOverview: React.FC<Props> = ({articleNews, changeViewStatus
     </div>
   );
 }
-
-// backgroundRepeat: "no-repeat"

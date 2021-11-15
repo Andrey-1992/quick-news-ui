@@ -1,12 +1,18 @@
 .home {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background-color: rgba(131, 136, 145, 0.89);
+  background-color: whitesmoke;
   overflow: auto;
   padding-bottom: 5%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
+  .home {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
   .home {
     grid-template-columns: 1fr;
   }
