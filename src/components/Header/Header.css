@@ -15,7 +15,7 @@ h1 {
   color: azure;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1000px) {
   .header {
     flex-direction: column;
   }

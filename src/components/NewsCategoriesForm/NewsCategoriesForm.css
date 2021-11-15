@@ -19,9 +19,8 @@
   border-radius: 8%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .news-categories-form  {
-    /* margin-left: 25%; */
     margin: 3% 0% 5% 25%;
   }
 }
