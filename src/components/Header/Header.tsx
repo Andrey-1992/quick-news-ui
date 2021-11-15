@@ -14,8 +14,8 @@ export const Header: React.FC<Props> = ({makeFetch}) => {
   return (
     <div className="header">
       <div className="project-tittle">
+        <p className="today-date">{todaysDate}</p>
         <h1>Quick News</h1>
-        <p className="today-date-text">{todaysDate}</p>
       </div>
       <NavBar makeFetch={makeFetch}/>
     </div>
