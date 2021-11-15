@@ -3,7 +3,7 @@ import React from 'react';
 import { Error } from '../Error/Error';
 import { Route, Switch } from 'react-router-dom';
 import { Header } from '../Header/Header';
-import { Home } from '../Home/Home';
+import { NewsCardContainer } from '../NewsCardContainer/NewsCardContainer';
 import { SavedNewsContainer } from '../SavedNewsContainer/SavedNewsContainer';
 import { fetchTopStories } from '../Util/util';
 import { useState, useEffect } from 'react';
@@ -72,7 +72,7 @@ export const App: React.FC = () => {
       <Header makeFetch={makeFetch}/> 
       <main className="main-section">
         <Switch>
-          <Route exact path="/" render={() => <Home searchedNews={searchedNews}  saveToStorage={saveToStorage}/>}/>
+          <Route exact path="/" render={() => <NewsCardContainer searchedNews={searchedNews} saveToStorage={saveToStorage} />}/>
           <Route exact path="/saved-news" render={() => <SavedNewsContainer />}/>
           <Route path="*" render={() => <Error />}/>
         </Switch>
