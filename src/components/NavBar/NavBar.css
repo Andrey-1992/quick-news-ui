@@ -10,9 +10,29 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 550;
   font-size: 150%;
-  color: azure;
-  /* padding: 1%; */
+  color: whitesmoke;
   width: 100%;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.50rem;
+}
+
+.nav-buttons::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 4px;
+  background-color: whitesmoke;
+  transition: width 0.55s ease-out;
+}
+
+.nav-buttons:hover::before {
+  width: 100%;
+  left: auto;
+  right: 0;
+  cursor: pointer;
 }
 
 
