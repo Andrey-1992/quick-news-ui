@@ -1,7 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: teal;
+  background-color: hsl(1, 93%, 32%);
 }
 
 h1 {

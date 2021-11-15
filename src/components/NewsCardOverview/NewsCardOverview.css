@@ -1,7 +1,7 @@
 .news-card-overview {
   /* height: 10%; */
   margin: 2%;
-  border: solid teal 1px;
+  border: solid  hsl(1, 93%, 32%) 1px;
   border-radius: 1%;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .info-card-overview:hover {
-  background-color: teal;
+  background-color:  hsl(1, 93%, 32%);
   opacity: 0.8;
   color: azure;
   opacity: 0.8;
@@ -26,6 +26,10 @@
 
 .overview-text {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.overview-text:hover {
+  opacity: 0.8;
 }
 
 h2 {
@@ -45,9 +49,6 @@ h2 {
 
 .more-info-btn:hover {
   cursor: pointer;
-  transform: scale(1.0.3);
+  transform: scale(1.1);
   transition: all 0.3s ease-in-out 0s;
-  border: none;
-  background-color: azure;
-  color: teal;
 }

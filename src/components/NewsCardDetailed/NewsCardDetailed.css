@@ -3,7 +3,7 @@
   background-color: whitesmoke;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 7%;
-  border: solid teal 5px;
+  border: solid  hsl(1, 93%, 32%) 5px;
   border-radius: 1%;
   overflow: auto;
   padding-bottom: 5%;
