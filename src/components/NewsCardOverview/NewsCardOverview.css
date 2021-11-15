@@ -44,7 +44,7 @@ h2 {
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-size: medium;
   font-weight: 600;
-  border: solid black 3px;
+  border: solid black 1px;
 }
 
 .more-info-btn:hover {
