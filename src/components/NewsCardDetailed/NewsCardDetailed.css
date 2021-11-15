@@ -1,12 +1,11 @@
 .news-card-detailed {
   grid-column-start: 2;
-  background-color: whitesmoke;
+  background-color: hsl(1, 93%, 32%);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 7%;
   border: solid  hsl(1, 93%, 32%) 5px;
   border-radius: 1%;
   overflow: auto;
-  padding-bottom: 5%;
 }
 
 .news-card-detailed:hover {
@@ -16,9 +15,12 @@
 }
 
 .img-card-detailed {
-  /* width: 100%; */
   height: auto;
-  /* padding: 5%; */
+}
+
+.card-detailed-text {
+  color: whitesmoke;
+  font-size: 120%;
 }
 
 .card-detailed-text:hover {
@@ -32,7 +34,7 @@
   font-family:Georgia, 'Times New Roman', Times, serif;
   font-size: medium;
   font-weight: 600;
-  border: solid black 3px;
+  background-color: whitesmoke;
   border-radius: 1%;
 }
 
