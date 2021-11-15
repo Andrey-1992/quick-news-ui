@@ -33,16 +33,16 @@ This project was created for the Mod 4 Take Home Challenge. We were given a mini
 
 ## Dashboard
 #### Desktop View
-<img width="1438" alt="Deskptop view - Home Window (Quick Start)" src="https://user-images.githubusercontent.com/78002374/141506772-d6fbf9b4-4722-48b2-93f4-2e209a8c4eb5.png">
+<img width="1434" alt="Quick News (Desktop Home View)" src="https://user-images.githubusercontent.com/78002374/141864470-f8abe718-cd36-4b34-a44c-b235a1dbc5b7.png">
+
 
 
 
 #### Mobile View
-<img width="495" alt="Mobile view - Home Window (Quick Start)" src="https://user-images.githubusercontent.com/78002374/141506802-3b26f628-d061-4fad-be83-a0856b99a002.png">
-
-<img width="494" alt="Screen Shot 2021-11-12 at 10 17 17 AM" src="https://user-images.githubusercontent.com/78002374/141507899-a9a6150c-90a6-4e6e-a290-a9b781aca747.png">
+<img width="496" alt="Quick News (Mobile Home View)" src="https://user-images.githubusercontent.com/78002374/141864560-b816420e-33d3-4e98-a044-78ed381bc336.png">
 
 
+<img width="497" alt="Quick News (Mobile Detailed View)" src="https://user-images.githubusercontent.com/78002374/141864505-82a62e3b-b8c9-4a7a-9294-e24e562df708.png">
 
 
 #### Accessiblity Test
