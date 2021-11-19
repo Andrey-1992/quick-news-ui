@@ -1,0 +1,15 @@
+.info-card-saved {
+  background-color: hsl(1, 93%, 32%);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 7%;
+  border: solid  hsl(1, 93%, 32%) 5px;
+  border-radius: 1%;
+  overflow: auto;
+}
+
+/* .info-card-saved:hover {
+  background-color:  hsl(1, 93%, 32%);
+  opacity: 0.8;
+  color: azure;
+  opacity: 0.8;
+} */
