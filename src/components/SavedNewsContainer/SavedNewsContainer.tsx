@@ -12,6 +12,7 @@ interface savedData {
   section: string
   imgUrl: string
   multimediaUrl: string
+  multimediaCaption: string
 }
 
 export const SavedNewsContainer: React.FC = () => {

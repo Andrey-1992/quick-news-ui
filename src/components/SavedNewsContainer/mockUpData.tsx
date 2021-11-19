@@ -32,6 +32,7 @@ export const mockUpData = [
     byline: "By Brad Plumer and Lisa Friedman",
     section: "climate",
     imgUrl: "https://www.nytimes.com/2021/11/13/climate/cop26-glasgow-climate-agreement.html",
-    multimediaUrl: "https://static01.nyt.com/images/2021/11/13/multimedia/13cli-cop26-final-group02/13cli-cop26-final-group02-superJumbo.jpg"
+    multimediaUrl: "https://static01.nyt.com/images/2021/11/13/multimedia/13cli-cop26-final-group02/13cli-cop26-final-group02-superJumbo.jpg",
+    multimediaCaption: "Weston McKennie, center, with Tyler Adams and Christian Pulisic after McKennie’s goal doubled the Americans’ lead in the 85th minute."
   }
 ];
