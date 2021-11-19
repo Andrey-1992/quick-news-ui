@@ -73,7 +73,7 @@ export const App: React.FC = () => {
       <main className="main-section">
         <Switch>
           <Route exact path="/" render={() => <NewsCardContainer searchedNews={searchedNews} saveToStorage={saveToStorage} />}/>
-          <Route exact path="/saved-news" render={() => <NewsCardContainer searchedNews={searchedNews} saveToStorage={saveToStorage} />}/>
+          <Route exact path="/saved-news" render={() => <SavedNewsContainer />}/>
           <Route path="*" render={() => <Error />}/>
         </Switch>
       </main>

@@ -14,7 +14,7 @@ export const SavedNewsContainer: React.FC = () => {
         // return JSON.parse(localStorage.getItem(reqData))
         // return JSON.parse(localStorage.getItem(reqData))
         // console.log(JSON.parse(localStorage.getItem(reqData)))
-        console.log(typeof reqData)
+        console.log(reqData)
     })
     // setIpCardsData(getStoredPosts);
     // createIpCards(ipCardsData);
