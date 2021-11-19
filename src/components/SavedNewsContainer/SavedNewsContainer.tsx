@@ -42,9 +42,7 @@ export const SavedNewsContainer: React.FC = () => {
       />)
     return (
       <div className="saved-news-container">
-        {/* <SavedNewsCard retrivedData={savedNews} /> */}
-        <p>true</p>
-        {/* <p>{savedNews[0].abstract}</p> */}
+        {renderNews}
       </div>
     )
   }
