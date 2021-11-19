@@ -6,30 +6,35 @@ import { Loading } from '../Loading/Loading';
 
 interface savedData {
   abstract: string
-    title: string
-    byline: string
-    section: string
-    imgUrl: string
-    multimediaUrl: string
+  title: string
+  byline: string
+  section: string
+  imgUrl: string
+  multimediaUrl: string
 }
 
 export const SavedNewsContainer: React.FC = () => {
   const [ savedNews, setSavedNews ] = useState<Array<savedData>>([]);
-  console.log(mockUpData)
+  // console.log(mockUpData)
   useEffect(() => {
     retrieveStoredData()
   }, [])
 
   const retrieveStoredData = () => {
     setSavedNews(mockUpData)
-    console.log(savedNews)
+    // console.log(savedNews)
   }
     
   const deleteStoredData = () => {
   }
 
   if (savedNews) {
-    <p>{savedNews[0].abstract}</p>
+    return (
+      <div className="saved-news-container">
+        <p>true</p>
+        <p>{savedNews[0].abstract}</p>
+      </div>
+    )
   }
 
   return (
