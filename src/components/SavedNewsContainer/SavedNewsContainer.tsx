@@ -2,6 +2,7 @@ import './SavedNewsContainer.css';
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { mockUpData } from './mockUpData';
+import { SavedNewsCard } from '../SavedNewsCard/SavedNewsCard';
 import { Loading } from '../Loading/Loading';
 
 interface savedData {
