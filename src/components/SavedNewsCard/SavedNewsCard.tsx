@@ -10,7 +10,7 @@ interface savedData {
   multimediaUrl: string
 }
 interface Props {
-  retrivedData = Array<savedData>
+  retrivedData: Array<savedData>
 }
 
 export const SavedNewsCard: React.FC<Props> = ({retrivedData}) => {
