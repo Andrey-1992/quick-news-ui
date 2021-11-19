@@ -1,29 +1,34 @@
 import './SavedNewsContainer.css';
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { mockUpData } from './mockUpData';
+
+interface savedData {
+  abstract: string
+    title: string
+    byline: string
+    section: string
+    imgUrl: string
+    multimediaUrl: string
+}
 
 export const SavedNewsContainer: React.FC = () => {
-  const [ savedNews, setSavedNews ] = useState([]);
-
+  const [ savedNews, setSavedNews ] = useState<Array<savedData>>([]);
+  console.log(mockUpData)
   useEffect(() => {
     retrieveStoredData()
   }, [])
 
   const retrieveStoredData = () => {
-    const getStoredPosts = Object.keys(localStorage).map(reqData => {
-        // return JSON.parse(localStorage.getItem(reqData))
-        // return JSON.parse(localStorage.getItem(reqData))
-        // console.log(JSON.parse(localStorage.getItem(reqData)))
-        console.log(reqData)
-    })
-    // setIpCardsData(getStoredPosts);
-    // createIpCards(ipCardsData);
+    setSavedNews(mockUpData)
+    console.log(savedNews)
   }
     
   const deleteStoredData = () => {
-    // localStorage.removeItem(data)
-    // retrieveFromStorage()
-    // console.log(data, "data in container")
+  }
+
+  if (savedNews) {
+    <p>{savedNews[0].abstract}</p>
   }
 
   return (
