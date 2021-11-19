@@ -17,7 +17,7 @@ interface savedData {
 
 export const SavedNewsContainer: React.FC = () => {
   const [ savedNews, setSavedNews ] = useState<Array<savedData>>([]);
-  // console.log(mockUpData)
+
   useEffect(() => {
     retrieveStoredData()
   }, [])
@@ -31,11 +31,20 @@ export const SavedNewsContainer: React.FC = () => {
   }
 
   if (savedNews) {
+    const renderNews = savedNews.map(data => <SavedNewsCard 
+      abstract={data.abstract} 
+      title={data.title}
+      byline={data.byline}
+      section={data.section}
+      imgUrl={data.imgUrl}
+      multimediaUrl={data.multimediaUrl}
+      multimediaCaption={data.multimediaCaption}
+      />)
     return (
       <div className="saved-news-container">
-        <SavedNewsCard retrivedData={savedNews} />
+        {/* <SavedNewsCard retrivedData={savedNews} /> */}
         <p>true</p>
-        <p>{savedNews[0].abstract}</p>
+        {/* <p>{savedNews[0].abstract}</p> */}
       </div>
     )
   }
