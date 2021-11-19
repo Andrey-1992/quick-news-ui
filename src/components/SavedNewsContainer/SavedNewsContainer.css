@@ -1,0 +1,19 @@
+.saved-news-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: whitesmoke;
+  overflow: auto;
+  padding-bottom: 5%;
+}
+
+@media screen and (max-width: 1000px) {
+  .saved-news-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .saved-news-container {
+    grid-template-columns: 1fr;
+  }
+}

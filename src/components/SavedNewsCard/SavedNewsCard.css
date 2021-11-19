@@ -1,0 +1,16 @@
+.news-card-saved {
+  background-color: hsl(1, 93%, 32%);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 7%;
+  border: solid  hsl(1, 93%, 32%) 5px;
+  border-radius: 1%;
+  overflow: auto;
+  opacity: 0.9;
+}
+
+.news-card-saved:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 0.3s ease-in-out 0s;
+  opacity: 1;
+}
