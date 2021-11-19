@@ -14,19 +14,30 @@ interface Props {
 }
 
 export const SavedNewsCard: React.FC<Props> = ({retrivedData}) => {
-  // console.log(articleNews)
-  // const sendStatus = ():void => {
-  //   changeViewStatus('detailed')
-  // }
+  const renderData = () => {
+    return retrivedData.map(data => {
+      <div className="news-card-detailed">
+        <img className="img-card-detailed" src={retrivedData.multimedia[0].url} alt={retrivedData.multimedia[0].caption} width="500" height="600"></img>
+        <h2 className="card-detailed-text">{retrivedData.title}</h2>
+        <p className="card-detailed-text">{retrivedData.abstract}</p>
+        <h4 className="card-detailed-text">{retrivedData.byline}</h4>
+        <p className="card-detailed-text">Category #{retrivedData.section}</p>
+        <button className='card-detailed-btns'>
+          <a href={retrivedData.url} target="_blank">Read Article</a>
+        </button>
+        <button onClick={deleteArticle} className='card-detailed-btns'>Delete Article</button>
+      </div>
+    })
+  }
 
-  // const saveArticle = (): void => {
-  //   saveToStorage()
-  // }
+  const deleteArticle = () => {
+    console.log('delete gfunctionality would be here')
+  }
 
   return (
     <p>test saved cards</p>
     // <div className="news-card-detailed">
-    //    <img className="img-card-detailed" src={articleNews.multimedia[0].url} alt={articleNews.multimedia[0].caption} width="500" height="600"></img>
+    //    <img className="img-card-detailed" src={retrivedData.multimedia[0].url} alt={retrivedData.multimedia[0].caption} width="500" height="600"></img>
     //   <h2 className="card-detailed-text">{articleNews.title}</h2>
     //   <p className="card-detailed-text">{articleNews.abstract}</p>
     //   <h4 className="card-detailed-text">{articleNews.byline}</h4>
