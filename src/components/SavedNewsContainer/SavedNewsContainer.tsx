@@ -2,6 +2,7 @@ import './SavedNewsContainer.css';
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { mockUpData } from './mockUpData';
+import { Loading } from '../Loading/Loading';
 
 interface savedData {
   abstract: string
@@ -32,9 +33,7 @@ export const SavedNewsContainer: React.FC = () => {
   }
 
   return (
-    <div >
-      <p>hello</p>
-    </div>
+    <Loading />
   );
 }
 
