@@ -8,9 +8,9 @@
   opacity: 0.9;
 }
 
-/* .info-card-saved:hover {
-  background-color:  hsl(1, 93%, 32%);
-  opacity: 0.8;
-  color: azure;
-  opacity: 0.8;
-} */
+.news-card-saved:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: all 0.3s ease-in-out 0s;
+  opacity: 1;
+}
