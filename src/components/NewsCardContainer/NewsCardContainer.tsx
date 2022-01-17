@@ -56,7 +56,7 @@ export const NewsCardContainer: React.FC<Props> = ({searchedNews, saveToStorage}
   const [ detailedView, setDetailedView ] = useState<boolean>(true);
   const [ articleName, setArticleName ] = useState<string | undefined>('');
 
-  const changeViewStatus = (viewStatus: string, articleTitle?: string):void => {
+  const changeViewStatus = (viewStatus: string, articleTitle?: string): void => {
     if (viewStatus === 'overview') {
       setDetailedView(false)
       setArticleName(articleTitle)
