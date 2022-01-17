@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { mockUpData } from './mockUpData';
 import { SavedNewsCard } from '../SavedNewsCard/SavedNewsCard';
 import { Loading } from '../Loading/Loading';
+import { getSavedNews } from '../Util/util';
 
 interface savedData {
   abstract: string
