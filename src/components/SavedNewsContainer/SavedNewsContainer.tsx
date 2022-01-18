@@ -26,8 +26,8 @@ export const SavedNewsContainer: React.FC = () => {
   const retrieveStoredData = () => {
     setSavedNews(mockUpData)
     getSavedNews()
-    .then(data => console.log(data))
-    // .then(data => setSavedNews(data))
+    // .then(data => console.log(data))
+    .then(data => setSavedNews(data))
   }
     
   const deleteStoredData = () => {
