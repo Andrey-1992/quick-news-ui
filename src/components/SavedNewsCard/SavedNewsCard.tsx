@@ -39,7 +39,7 @@ export const SavedNewsCard: React.FC<Props> = ({
       <button className='card-detailed-btns'>
       <a href={urlink} target="_blank">Read Article</a>
       </button>
-      <button onClick={deleteArticle} className='card-detailed-btns'>Delete Article</button>
+      <button onClick={() => deleteStoredNews(id)} className='card-detailed-btns'>Delete Article</button>
     </div>
   );
 }
