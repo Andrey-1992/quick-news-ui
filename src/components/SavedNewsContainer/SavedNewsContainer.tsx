@@ -26,12 +26,12 @@ export const SavedNewsContainer: React.FC = () => {
 
   const retrieveStoredData = () => {
     getSavedNews()
-    // .then(data => console.log(data))
     .then(data => setSavedNews(data))
     .catch(error => console.log(error))
   }
     
-  const deleteStoredData = () => {
+  const deleteStoredNews = (id: number) => {
+    console.log(id)
   }
 
   if (savedNews) {
