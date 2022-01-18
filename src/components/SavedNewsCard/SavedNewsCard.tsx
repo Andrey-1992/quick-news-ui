@@ -9,7 +9,8 @@ interface Props {
   urlink: string
   multimediaurl: string
   multimediaCaption: string
-  id: number
+  id: number,
+  deleteStoredNews: (id: number) => void
 }
 
 export const SavedNewsCard: React.FC<Props> = ({
@@ -20,7 +21,8 @@ export const SavedNewsCard: React.FC<Props> = ({
   multimediaurl,
   urlink,
   multimediaCaption,
-  id
+  id,
+  deleteStoredNews
   }) => {
 
   const deleteArticle = () => {

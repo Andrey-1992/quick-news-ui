@@ -30,7 +30,7 @@ export const SavedNewsContainer: React.FC = () => {
     .catch(error => console.log(error))
   }
     
-  const deleteStoredNews = (id: number) => {
+  const deleteStoredNews = (id: number): void => {
     console.log(id)
   }
 
@@ -45,6 +45,7 @@ export const SavedNewsContainer: React.FC = () => {
       multimediaCaption={data.multimediacaption}
       key={data.id}
       id={data.id}
+      deleteStoredNews={deleteStoredNews}
       />)
     return (
       <div className="saved-news-container">
