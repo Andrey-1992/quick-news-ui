@@ -35,7 +35,7 @@ export const deleteSavedNews = async (id: number) => {
     });
     const res_1 = await res.json();
     return console.log(res_1);
-  } catch (error) {
-    return console.log(error);
+  } catch (err) {
+    return err;
   }
 }
