@@ -23,3 +23,19 @@ export const getSavedNews = async () => {
     return err;
   }
 }
+
+export const deleteSavedNews = async (id: number) => {
+  try {
+    const res = await fetch(`https://quick-news-api.herokuapp.com/saved-news/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(id)
+    });
+    const res_1 = await res.json();
+    return console.log(res_1);
+  } catch (error) {
+    return console.log(error);
+  }
+}
