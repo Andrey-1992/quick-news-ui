@@ -9,6 +9,7 @@ interface Props {
   urlink: string
   multimediaurl: string
   multimediaCaption: string
+  id: number
 }
 
 export const SavedNewsCard: React.FC<Props> = ({
@@ -18,7 +19,8 @@ export const SavedNewsCard: React.FC<Props> = ({
   section,
   multimediaurl,
   urlink,
-  multimediaCaption
+  multimediaCaption,
+  id
   }) => {
 
   const deleteArticle = () => {

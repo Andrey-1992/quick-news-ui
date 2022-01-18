@@ -14,6 +14,7 @@ interface savedData {
   urlink: string
   multimediaurl: string
   multimediacaption: string
+  id: number
 }
 
 export const SavedNewsContainer: React.FC = () => {
@@ -42,6 +43,8 @@ export const SavedNewsContainer: React.FC = () => {
       multimediaurl={data.multimediaurl}
       urlink={data.urlink}
       multimediaCaption={data.multimediacaption}
+      key={data.id}
+      id={data.id}
       />)
     return (
       <div className="saved-news-container">
