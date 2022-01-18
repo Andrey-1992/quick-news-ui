@@ -31,7 +31,8 @@ export const SavedNewsContainer: React.FC = () => {
   }
     
   const deleteStoredNews = (id: number): void => {
-    console.log(id)
+    // console.log(id)
+    deleteSavedNews(id)
   }
 
   if (savedNews) {
