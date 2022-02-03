@@ -40,3 +40,21 @@ export const deleteSavedNews = async (id: number) => {
     return err;
   }
 }
+
+export const postSavedNews = async (body: number) => {
+  try {
+    const res = await fetch(`https://quick-news-api.herokuapp.com/saved-news/${id}`, {
+      method: 'POST',
+      headers: {
+        // This line of code abilities the cors to fecth properly.
+        // 'Access-Control-Allow-Origin': '*'
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+    const res_1 = await res.json();
+    return console.log(res_1);
+  } catch (err) {
+    return err;
+  }
+}
