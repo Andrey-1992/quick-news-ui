@@ -49,7 +49,7 @@ interface MultimediaInfo {
 
 interface Props {
   searchedNews?: NewsInfoApi
-  saveToStorage: () => void 
+  saveToStorage: (objBody: string) => void 
 }
 
 let id = 0;

@@ -63,8 +63,10 @@ export const App: React.FC = () => {
     .catch(error => console.log(error))
   }
 
-  const saveToStorage = () => {
-    localStorage.setItem(searchedNews.last_updated, JSON.stringify(searchedNews))
+  const saveToStorage = (objBody: string) => {
+    // localStorage.setItem(searchedNews.last_updated, JSON.stringify(searchedNews))
+    // console.log(searchedNews)
+    postSavedNews(objBody)
   }
 
   return (

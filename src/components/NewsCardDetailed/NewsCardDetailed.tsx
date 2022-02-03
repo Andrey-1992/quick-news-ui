@@ -36,7 +36,7 @@ interface MultimediaInfo {
 interface Props {
   articleNews: Article
   changeViewStatus: (viewStatus: string, articleTitle?: string) => void
-  saveToStorage: () => void
+  saveToStorage: (objBody: string) => void
 }
 
 export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus, saveToStorage}) => {
@@ -46,7 +46,7 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus
   }
 
   const saveArticle = (): void => {
-    saveToStorage()
+    // saveToStorage()
   }
 
   return (
@@ -57,7 +57,7 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus
       <h4 className="card-detailed-text">{articleNews.byline}</h4>
       <p className="card-detailed-text">Category #{articleNews.section}</p>
       <button className='card-detailed-btns'>
-      <a href={articleNews.url} target="_blank" rel="noreferrer">Read Article</a>
+      <a href={articleNews.url} target="_blank" rel="noreferrer"  >Read Article</a>
       </button>
       <button onClick={saveArticle} className='card-detailed-btns'>Save Article</button>
       <button className='card-detailed-btns' onClick={sendStatus}>Back Home</button>
