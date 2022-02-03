@@ -25,10 +25,6 @@ export const SavedNewsCard: React.FC<Props> = ({
   deleteStoredNews
   }) => {
 
-  const deleteArticle = () => {
-    console.log('delete gfunctionality would be here')
-  }
-
   return (
     <div className="news-card-saved">
       <img className="img-card-detailed" src={multimediaurl} alt={multimediaCaption} width="500" height="600"></img>
@@ -37,7 +33,7 @@ export const SavedNewsCard: React.FC<Props> = ({
       <h4 className="card-detailed-text">{byline}</h4>
       <p className="card-detailed-text">Category #{section}</p>
       <button className='card-detailed-btns'>
-      <a href={urlink} target="_blank">Read Article</a>
+      <a href={urlink} target="_blank" rel="noreferrer">Read Article</a>
       </button>
       <button onClick={() => deleteStoredNews(id)} className='card-detailed-btns'>Delete Article</button>
     </div>
