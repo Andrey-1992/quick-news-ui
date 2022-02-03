@@ -36,17 +36,18 @@ export const SavedNewsContainer: React.FC = () => {
   }
 
   if (savedNews) {
-    const renderNews = savedNews.map(data => <SavedNewsCard 
-      abstract={data.abstract} 
-      title={data.title}
-      byline={data.byline}
-      section={data.section}
-      multimediaurl={data.multimediaurl}
-      urlink={data.urlink}
-      multimediaCaption={data.multimediacaption}
-      key={data.id}
-      id={data.id}
-      deleteStoredNews={deleteStoredNews}
+    const renderNews = savedNews.map(data => 
+      <SavedNewsCard 
+        abstract={data.abstract} 
+        title={data.title}
+        byline={data.byline}
+        section={data.section}
+        multimediaurl={data.multimediaurl}
+        urlink={data.urlink}
+        multimediaCaption={data.multimediacaption}
+        key={data.id}
+        id={data.id}
+        deleteStoredNews={deleteStoredNews}
       />)
     return (
       <div className="saved-news-container">

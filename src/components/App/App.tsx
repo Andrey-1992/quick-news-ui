@@ -58,7 +58,7 @@ export const App: React.FC = () => {
   }, [])
 
   const makeFetch = (searchedCategory: string): void => {
-    fetchTopStories('world')
+    fetchTopStories(searchedCategory)
     .then(data => setSearchedNews(data))
     .catch(error => console.log(error))
   }
