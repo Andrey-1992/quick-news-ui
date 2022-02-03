@@ -47,6 +47,15 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus
 
   const saveArticle = (): void => {
     // saveToStorage()
+    const body = {
+      "abstract": {articleNews.abstract},
+      "byline": {articleNews.byline},
+      "title": {articleNews.title},
+      // "multimediaurl": {articleNews.multimedia[0].url},
+      // "multimediacaption": {articleNews.multimedia[0].caption},
+      // "urlink": {articleNews.url},
+      "section": {articleNews.section}
+    }
   }
 
   return (
