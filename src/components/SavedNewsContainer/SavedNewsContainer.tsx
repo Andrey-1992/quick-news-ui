@@ -4,15 +4,17 @@ import { useState, useEffect } from 'react';
 import { mockUpData } from './mockUpData';
 import { SavedNewsCard } from '../SavedNewsCard/SavedNewsCard';
 import { Loading } from '../Loading/Loading';
+import { getSavedNews, deleteSavedNews } from '../Util/util';
 
 interface savedData {
   abstract: string
   title: string
   byline: string
   section: string
-  imgUrl: string
-  multimediaUrl: string
-  multimediaCaption: string
+  urlink: string
+  multimediaurl: string
+  multimediacaption: string
+  id: number
 }
 
 export const SavedNewsContainer: React.FC = () => {
@@ -23,21 +25,29 @@ export const SavedNewsContainer: React.FC = () => {
   }, [])
 
   const retrieveStoredData = () => {
-    setSavedNews(mockUpData)
+    getSavedNews()
+    .then(data => setSavedNews(data))
+    .catch(error => console.log(error))
   }
     
-  const deleteStoredData = () => {
+  const deleteStoredNews = (id: number): void => {
+    // console.log(id)
+    deleteSavedNews(id)
   }
 
   if (savedNews) {
-    const renderNews = savedNews.map(data => <SavedNewsCard 
-      abstract={data.abstract} 
-      title={data.title}
-      byline={data.byline}
-      section={data.section}
-      imgUrl={data.imgUrl}
-      multimediaUrl={data.multimediaUrl}
-      multimediaCaption={data.multimediaCaption}
+    const renderNews = savedNews.map(data => 
+      <SavedNewsCard 
+        abstract={data.abstract} 
+        title={data.title}
+        byline={data.byline}
+        section={data.section}
+        multimediaurl={data.multimediaurl}
+        urlink={data.urlink}
+        multimediaCaption={data.multimediacaption}
+        key={data.id}
+        id={data.id}
+        deleteStoredNews={deleteStoredNews}
       />)
     return (
       <div className="saved-news-container">
