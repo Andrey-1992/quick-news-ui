@@ -29,7 +29,8 @@ export const deleteSavedNews = async (id: number) => {
     const res = await fetch(`https://quick-news-api.herokuapp.com/saved-news/${id}`, {
       method: 'DELETE',
       headers: {
-        'Content-Type': 'application/json'
+        // This line of code abilities the cors to fecth properly.
+        'Access-Control-Allow-Origin': '*'
       },
       body: JSON.stringify(id)
     });
