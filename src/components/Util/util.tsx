@@ -41,9 +41,9 @@ export const deleteSavedNews = async (id: number) => {
   }
 }
 
-export const postSavedNews = async (body: number) => {
+export const postSavedNews = async (body: string) => {
   try {
-    const res = await fetch(`https://quick-news-api.herokuapp.com/saved-news/${id}`, {
+    const res = await fetch(`https://quick-news-api.herokuapp.com/saved-news/${body}`, {
       method: 'POST',
       headers: {
         // This line of code abilities the cors to fecth properly.
