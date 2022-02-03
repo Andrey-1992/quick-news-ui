@@ -52,6 +52,11 @@ interface Props {
   saveToStorage: () => void 
 }
 
+let id = 0;
+function getId() {
+  return id++;
+}
+
 export const NewsCardContainer: React.FC<Props> = ({searchedNews, saveToStorage}) => {
   const [ detailedView, setDetailedView ] = useState<boolean>(true);
   const [ articleName, setArticleName ] = useState<string | undefined>('');
@@ -68,8 +73,8 @@ export const NewsCardContainer: React.FC<Props> = ({searchedNews, saveToStorage}
   if (searchedNews) {
     const resultArray = searchedNews.results
     const findArticle = resultArray.filter(article => article.title === articleName);
-    const newsCardDetail= findArticle.map(news => <NewsCardDetailed articleNews={news} changeViewStatus={changeViewStatus} saveToStorage={saveToStorage}/>)
-    const newsCardOver= resultArray.map(news => <NewsCardOverview articleNews={news} changeViewStatus={changeViewStatus} />)
+    const newsCardDetail= findArticle.map(news => <NewsCardDetailed articleNews={news} key={getId() + 1} changeViewStatus={changeViewStatus} saveToStorage={saveToStorage}/>)
+    const newsCardOver= resultArray.map(news => <NewsCardOverview articleNews={news} key={getId()} changeViewStatus={changeViewStatus} />)
     return (
       <div className="home">
         {!detailedView ? newsCardDetail : newsCardOver}
