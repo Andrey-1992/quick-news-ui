@@ -29,9 +29,35 @@ export const deleteSavedNews = async (id: number) => {
     const res = await fetch(`https://quick-news-api.herokuapp.com/saved-news/${id}`, {
       method: 'DELETE',
       headers: {
-        'Content-Type': 'application/json'
+        // This line of code abilities the cors to fecth properly.
+        'Access-Control-Allow-Origin': '*'
       },
       body: JSON.stringify(id)
+    });
+    const res_1 = await res.json();
+    return console.log(res_1);
+  } catch (err) {
+    return err;
+  }
+}
+interface Body {
+  abstract?: string
+  byline?: string
+  title?: string
+  multimediaurl?: string
+  multimediacaption?: string
+  urlink?: string
+  section?: string
+}
+
+export const postSavedNews = async (objBody: Body) => {
+  try {
+    const res = await fetch(`https://quick-news-api.herokuapp.com/saved-news/`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(objBody)
     });
     const res_1 = await res.json();
     return console.log(res_1);

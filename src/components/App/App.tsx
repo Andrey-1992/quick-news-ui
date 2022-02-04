@@ -5,7 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 import { Header } from '../Header/Header';
 import { NewsCardContainer } from '../NewsCardContainer/NewsCardContainer';
 import { SavedNewsContainer } from '../SavedNewsContainer/SavedNewsContainer';
-import { fetchTopStories } from '../Util/util';
+import { fetchTopStories, postSavedNews } from '../Util/util';
 import { useState, useEffect } from 'react';
 
 interface NewsInfoApi {
@@ -49,6 +49,15 @@ interface MultimediaInfo {
   url: string
   width: number
 }
+interface Body {
+  abstract?: string
+  byline?: string
+  title?: string
+  multimediaurl?: string
+  multimediacaption?: string
+  urlink?: string
+  section?: string
+}
 
 export const App: React.FC = () => {
   const [searchedNews, setSearchedNews] = useState<any>()
@@ -63,8 +72,8 @@ export const App: React.FC = () => {
     .catch(error => console.log(error))
   }
 
-  const saveToStorage = () => {
-    localStorage.setItem(searchedNews.last_updated, JSON.stringify(searchedNews))
+  const saveToStorage = (objBody: Body) => {
+    postSavedNews(objBody)
   }
 
   return (

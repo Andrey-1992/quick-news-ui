@@ -47,9 +47,24 @@ interface MultimediaInfo {
   width: number
 }
 
+interface Body {
+  abstract?: string
+  byline?: string
+  title?: string
+  multimediaurl?: string
+  multimediacaption?: string
+  urlink?: string
+  section?: string
+}
+
 interface Props {
   searchedNews?: NewsInfoApi
-  saveToStorage: () => void 
+  saveToStorage: (objBody: Body) => void 
+}
+
+let id = 0;
+function getId() {
+  return id++;
 }
 
 export const NewsCardContainer: React.FC<Props> = ({searchedNews, saveToStorage}) => {
@@ -68,8 +83,8 @@ export const NewsCardContainer: React.FC<Props> = ({searchedNews, saveToStorage}
   if (searchedNews) {
     const resultArray = searchedNews.results
     const findArticle = resultArray.filter(article => article.title === articleName);
-    const newsCardDetail= findArticle.map(news => <NewsCardDetailed articleNews={news} changeViewStatus={changeViewStatus} saveToStorage={saveToStorage}/>)
-    const newsCardOver= resultArray.map(news => <NewsCardOverview articleNews={news} changeViewStatus={changeViewStatus} />)
+    const newsCardDetail = findArticle.map(news => <NewsCardDetailed articleNews={news} key={getId() + 1} changeViewStatus={changeViewStatus} saveToStorage={saveToStorage}/>)
+    const newsCardOver = resultArray.map(news => <NewsCardOverview articleNews={news} key={getId()} changeViewStatus={changeViewStatus} />)
     return (
       <div className="home">
         {!detailedView ? newsCardDetail : newsCardOver}

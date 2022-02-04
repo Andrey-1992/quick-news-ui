@@ -33,10 +33,20 @@ interface MultimediaInfo {
   width: number
 }
 
+interface Body {
+  abstract?: string
+  byline?: string
+  title?: string
+  multimediaurl?: string
+  multimediacaption?: string
+  urlink?: string
+  section?: string
+}
+
 interface Props {
   articleNews: Article
   changeViewStatus: (viewStatus: string, articleTitle?: string) => void
-  saveToStorage: () => void
+  saveToStorage: (objBody: Body) => void
 }
 
 export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus, saveToStorage}) => {
@@ -46,7 +56,17 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus
   }
 
   const saveArticle = (): void => {
-    saveToStorage()
+    saveToStorage(
+      {
+        "abstract": articleNews.abstract,
+        "byline": articleNews.byline,
+        "title": articleNews.title,
+        "multimediaurl": articleNews.multimedia[0].url,
+        "multimediacaption": articleNews.multimedia[0].caption,
+        "urlink": articleNews.url,
+        "section": articleNews.section
+      }
+    )
   }
 
   return (
@@ -57,7 +77,7 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus
       <h4 className="card-detailed-text">{articleNews.byline}</h4>
       <p className="card-detailed-text">Category #{articleNews.section}</p>
       <button className='card-detailed-btns'>
-      <a href={articleNews.url} target="_blank">Read Article</a>
+      <a href={articleNews.url} target="_blank" rel="noreferrer"  >Read Article</a>
       </button>
       <button onClick={saveArticle} className='card-detailed-btns'>Save Article</button>
       <button className='card-detailed-btns' onClick={sendStatus}>Back Home</button>

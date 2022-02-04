@@ -1,11 +1,13 @@
 import './NewsCategoriesForm.css';
 import React from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-
-
 interface Props {
   makeFetch: (searchedCategory: string) => void;
+}
+
+let id = 0;
+function getId() {
+  return id++;
 }
 
 export const NewsCategoriesForm: React.FC<Props> = ({makeFetch}) => {
@@ -35,7 +37,7 @@ export const NewsCategoriesForm: React.FC<Props> = ({makeFetch}) => {
       <form className="categories-form">
         <select className="option-style" onChange={(event) => setSelectedCategory(event.target.value)}>
           {newsCategory.map(list => (
-            <option className="option-choice-style" value={list.Value}>
+            <option className="option-choice-style" value={list.Value} key={getId()}>
               {list.Name}
             </option>
           ))}
