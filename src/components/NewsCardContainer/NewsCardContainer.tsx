@@ -47,9 +47,19 @@ interface MultimediaInfo {
   width: number
 }
 
+interface Body {
+  abstract?: string
+  byline?: string
+  title?: string
+  multimediaurl?: string
+  multimediacaption?: string
+  urlink?: string
+  section?: string
+}
+
 interface Props {
   searchedNews?: NewsInfoApi
-  saveToStorage: (objBody: string) => void 
+  saveToStorage: (objBody: Body) => void 
 }
 
 let id = 0;

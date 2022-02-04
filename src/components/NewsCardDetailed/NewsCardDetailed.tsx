@@ -34,19 +34,19 @@ interface MultimediaInfo {
 }
 
 interface Body {
-  abstract: string
-  byline: string
-  title: string
-  multimediaurl: string
-  multimediacaption: string
-  urlink: string
-  section: string
+  abstract?: string
+  byline?: string
+  title?: string
+  multimediaurl?: string
+  multimediacaption?: string
+  urlink?: string
+  section?: string
 }
 
 interface Props {
   articleNews: Article
   changeViewStatus: (viewStatus: string, articleTitle?: string) => void
-  saveToStorage: (objBody: string) => void
+  saveToStorage: (objBody: Body) => void
 }
 
 export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus, saveToStorage}) => {

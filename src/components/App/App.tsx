@@ -49,6 +49,15 @@ interface MultimediaInfo {
   url: string
   width: number
 }
+interface Body {
+  abstract?: string
+  byline?: string
+  title?: string
+  multimediaurl?: string
+  multimediacaption?: string
+  urlink?: string
+  section?: string
+}
 
 export const App: React.FC = () => {
   const [searchedNews, setSearchedNews] = useState<any>()
@@ -63,7 +72,7 @@ export const App: React.FC = () => {
     .catch(error => console.log(error))
   }
 
-  const saveToStorage = (objBody: string) => {
+  const saveToStorage = (objBody: Body) => {
     // localStorage.setItem(searchedNews.last_updated, JSON.stringify(searchedNews))
     // console.log(searchedNews)
     console.log(objBody)
