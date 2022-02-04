@@ -52,11 +52,9 @@ interface Body {
 
 export const postSavedNews = async (objBody: Body) => {
   try {
-    const res = await fetch(`https://quick-news-api.herokuapp.com/saved-news/${objBody}`, {
+    const res = await fetch(`https://quick-news-api.herokuapp.com/saved-news/`, {
       method: 'POST',
       headers: {
-        // This line of code abilities the cors to fecth properly.
-        // 'Access-Control-Allow-Origin': '*'
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(objBody)
