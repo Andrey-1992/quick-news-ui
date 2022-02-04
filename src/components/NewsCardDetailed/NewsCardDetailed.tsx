@@ -34,13 +34,13 @@ interface MultimediaInfo {
 }
 
 interface Body {
-  abstract: articleNews.abstract,
-  byline: articleNews.byline,
-  title: articleNews.title,
-  multimediaurl: articleNews.multimedia[0].url,
-  multimediacaption: articleNews.multimedia[0].caption,
-  urlink: articleNews.url,
-  section: articleNews.section
+  abstract: string
+  byline: string
+  title: string
+  multimediaurl: string
+  multimediacaption: string
+  urlink: string
+  section: string
 }
 
 interface Props {
