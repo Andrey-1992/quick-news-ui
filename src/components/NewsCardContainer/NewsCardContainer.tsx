@@ -46,7 +46,6 @@ interface MultimediaInfo {
   url: string
   width: number
 }
-
 interface Body {
   abstract?: string
   byline?: string

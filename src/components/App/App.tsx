@@ -63,7 +63,7 @@ export const App: React.FC = () => {
   const [searchedNews, setSearchedNews] = useState<any>()
 
   useEffect(() => {
-    makeFetch('home')
+    makeFetch('world')
   }, [])
 
   const makeFetch = (searchedCategory: string): void => {
