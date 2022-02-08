@@ -45,7 +45,7 @@ export const SavedNewsCard: React.FC<Props> = ({
       <button className='card-detailed-btns'>
       <a href={urlink} target="_blank" rel="noreferrer">Read Article</a>
       </button>
-      <button onClick={() => deleteNews} className='card-detailed-btns'>{isDeleted? 'Deleted!' : 'Delete News'}</button>
+      <button onClick={() => deleteNews} disabled={isDisable} className='card-detailed-btns'>{isDeleted? 'Deleted!' : 'Delete News'}</button>
     </div>
   );
 }
