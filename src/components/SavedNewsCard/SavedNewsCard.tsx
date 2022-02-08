@@ -33,6 +33,7 @@ export const SavedNewsCard: React.FC<Props> = ({
     deleteStoredNews(id);
     setIsDeleted(true);
     setIsDisable(true);
+    console.log('test')
   }
 
   return (
@@ -45,7 +46,7 @@ export const SavedNewsCard: React.FC<Props> = ({
       <button className='card-detailed-btns'>
       <a href={urlink} target="_blank" rel="noreferrer">Read Article</a>
       </button>
-      <button onClick={() => deleteNews} disabled={isDisable} className={isDeleted? 'saved-btn' : 'card-detailed-btns'}>{isDeleted? 'Deleted!' : 'Delete News'}</button>
+      <button onClick={() => deleteNews()} disabled={isDisable} className={isDeleted? 'saved-btn' : 'card-detailed-btns'}>{isDeleted? 'Deleted!' : 'Delete News'}</button>
     </div>
   );
 }
