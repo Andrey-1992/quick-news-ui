@@ -26,9 +26,13 @@ export const SavedNewsCard: React.FC<Props> = ({
   deleteStoredNews
   }) => {
 
-    const deleteNews = (): void => {
-      deleteStoredNews(id)
-    }
+  const [isSaved, setIsSaved] = useState<boolean>(false);
+  const [isDisable, setIsDisable] = useState<boolean>(false);
+
+  const deleteNews = (): void => {
+    deleteStoredNews(id);
+    
+  }
 
   return (
     <div className="news-card-saved">
