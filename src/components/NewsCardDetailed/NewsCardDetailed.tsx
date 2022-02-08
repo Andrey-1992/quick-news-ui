@@ -1,5 +1,6 @@
 import './NewsCardDetailed.css';
 import React from 'react';
+import { useState } from 'react';
 interface Article {
   section?: string
   subsection?: string
@@ -50,7 +51,8 @@ interface Props {
 }
 
 export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus, saveToStorage}) => {
-  // console.log(articleNews)
+  const [isFavorite, setIsFavorite] = useState<boolean>(false);
+
   const sendStatus = ():void => {
     changeViewStatus('detailed')
   }
@@ -77,7 +79,7 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus
       <h4 className="card-detailed-text">{articleNews.byline}</h4>
       <p className="card-detailed-text">Category #{articleNews.section}</p>
       <button className='card-detailed-btns'>
-      <a href={articleNews.url} target="_blank" rel="noreferrer"  >Read Article</a>
+      <a href={articleNews.url} target="_blank" rel="noreferrer" >Read Article</a>
       </button>
       <button onClick={saveArticle} className='card-detailed-btns'>Save Article</button>
       <button className='card-detailed-btns' onClick={sendStatus}>Back Home</button>
