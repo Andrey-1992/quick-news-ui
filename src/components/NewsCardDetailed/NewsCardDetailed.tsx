@@ -52,6 +52,7 @@ interface Props {
 
 export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus, saveToStorage}) => {
   const [isSaved, setIsSaved] = useState<boolean>(false);
+  const [isDisable, setIsDisable] = useState<boolean>(false);
 
   const sendStatus = ():void => {
     changeViewStatus('detailed')
