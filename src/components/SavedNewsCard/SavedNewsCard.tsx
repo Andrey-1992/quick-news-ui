@@ -1,5 +1,6 @@
 import './SavedNewsCard.css';
 import React from 'react';
+import { useState } from 'react';
 
 interface Props {
   abstract: string
