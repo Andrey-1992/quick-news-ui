@@ -1,5 +1,6 @@
 import './SavedNewsCard.css';
 import React from 'react';
+import { useState } from 'react';
 
 interface Props {
   abstract: string
@@ -25,6 +26,16 @@ export const SavedNewsCard: React.FC<Props> = ({
   deleteStoredNews
   }) => {
 
+  const [isDeleted, setIsDeleted] = useState<boolean>(false);
+  const [isDisable, setIsDisable] = useState<boolean>(false);
+
+  const deleteNews = (): void => {
+    deleteStoredNews(id);
+    setIsDeleted(true);
+    setIsDisable(true);
+    console.log('test')
+  }
+
   return (
     <div className="news-card-saved">
       <img className="img-card-detailed" src={multimediaurl} alt={multimediaCaption} width="500" height="600"></img>
@@ -35,7 +46,7 @@ export const SavedNewsCard: React.FC<Props> = ({
       <button className='card-detailed-btns'>
       <a href={urlink} target="_blank" rel="noreferrer">Read Article</a>
       </button>
-      <button onClick={() => deleteStoredNews(id)} className='card-detailed-btns'>Delete Article</button>
+      <button onClick={() => deleteNews()} disabled={isDisable} className={isDeleted? 'saved-btn' : 'card-detailed-btns'}>{isDeleted? 'Deleted!' : 'Delete News'}</button>
     </div>
   );
 }

@@ -5,6 +5,15 @@ import { Loading } from '../Loading/Loading';
 import { NewsCardDetailed } from '../NewsCardDetailed/NewsCardDetailed';
 import { NewsCardOverview } from '../NewsCardOverview/NewsCardOverview';
 
+interface Body {
+  abstract?: string
+  byline?: string
+  title?: string
+  multimediaurl?: string
+  multimediacaption?: string
+  urlink?: string
+  section?: string
+}
 interface NewsInfoApi {
   status?: string
   copyright?: string
@@ -45,15 +54,6 @@ interface MultimediaInfo {
   type: string
   url: string
   width: number
-}
-interface Body {
-  abstract?: string
-  byline?: string
-  title?: string
-  multimediaurl?: string
-  multimediacaption?: string
-  urlink?: string
-  section?: string
 }
 
 interface Props {

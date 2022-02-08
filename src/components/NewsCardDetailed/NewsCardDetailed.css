@@ -10,7 +10,7 @@
 
 .news-card-detailed:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.03);
   transition: all 0.3s ease-in-out 0s;
 }
 
@@ -39,6 +39,24 @@
 }
 
 .card-detailed-btns:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.saved-btn {
+  margin: 2%;
+  margin-bottom: 2%;
+  color: #ebe8e8;
+  padding: 0.5%;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: medium;
+  font-weight: 600;
+  background-color: hsl(243, 89%, 29%);
+  border-radius: 1%;
+}
+
+.saved-btn:hover {
   cursor: pointer;
   transform: scale(1.05);
   transition: all 0.3s ease-in-out 0s;
