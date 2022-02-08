@@ -82,7 +82,7 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus
       <button className='card-detailed-btns'>
       <a href={articleNews.url} target="_blank" rel="noreferrer" >Read Article</a>
       </button>
-      <button onClick={saveArticle} className={isSaved? 'un-saved-article!' : 'saved-article'}>{isSaved? 'Saved!' : 'Save Article'}</button>
+      <button onClick={saveArticle} className={isSaved? 'saved-btn' : 'card-detailed-btns'}>{isSaved? 'Saved!' : 'Save Article'}</button>
       <button className='card-detailed-btns' onClick={sendStatus}>Back Home</button>
     </div>
   );
