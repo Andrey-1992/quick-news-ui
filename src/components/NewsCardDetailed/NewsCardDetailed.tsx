@@ -51,7 +51,7 @@ interface Props {
 }
 
 export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus, saveToStorage}) => {
-  const [isFavorite, setIsFavorite] = useState<boolean>(false);
+  const [isSaved, setIsSaved] = useState<boolean>(false);
 
   const sendStatus = ():void => {
     changeViewStatus('detailed')
@@ -69,6 +69,7 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus
         "section": articleNews.section
       }
     )
+    setIsSaved(true)
   }
 
   return (
