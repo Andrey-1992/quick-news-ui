@@ -71,6 +71,7 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus
       }
     )
     setIsSaved(true)
+    setIsDisable(true)
   }
 
   return (
@@ -83,7 +84,7 @@ export const NewsCardDetailed: React.FC<Props> = ({articleNews, changeViewStatus
       <button className='card-detailed-btns'>
       <a href={articleNews.url} target="_blank" rel="noreferrer" >Read Article</a>
       </button>
-      <button onClick={saveArticle} disable={isDisable} className={isSaved? 'saved-btn' : 'card-detailed-btns'}>{isSaved? 'Saved!' : 'Save Article'}</button>
+      <button onClick={saveArticle} disabled={isDisable} className={isSaved? 'saved-btn' : 'card-detailed-btns'}>{isSaved? 'Saved!' : 'Save Article'}</button>
       <button className='card-detailed-btns' onClick={sendStatus}>Back Home</button>
     </div>
   );
