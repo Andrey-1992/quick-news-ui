@@ -26,7 +26,7 @@ export const SavedNewsCard: React.FC<Props> = ({
   deleteStoredNews
   }) => {
 
-  const [isSaved, setIsSaved] = useState<boolean>(false);
+  const [isDeleted, setIsDeleted] = useState<boolean>(false);
   const [isDisable, setIsDisable] = useState<boolean>(false);
 
   const deleteNews = (): void => {
@@ -44,7 +44,7 @@ export const SavedNewsCard: React.FC<Props> = ({
       <button className='card-detailed-btns'>
       <a href={urlink} target="_blank" rel="noreferrer">Read Article</a>
       </button>
-      <button onClick={() => deleteNews} className='card-detailed-btns'>Delete Article</button>
+      <button onClick={() => deleteNews} className='card-detailed-btns'>{isDeleted? 'Deleted!' : 'Delete News'}</button>
     </div>
   );
 }
