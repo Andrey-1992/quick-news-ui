@@ -25,6 +25,10 @@ export const SavedNewsCard: React.FC<Props> = ({
   deleteStoredNews
   }) => {
 
+    const deleteNews = (): void => {
+      deleteStoredNews(id)
+    }
+
   return (
     <div className="news-card-saved">
       <img className="img-card-detailed" src={multimediaurl} alt={multimediaCaption} width="500" height="600"></img>
@@ -35,7 +39,7 @@ export const SavedNewsCard: React.FC<Props> = ({
       <button className='card-detailed-btns'>
       <a href={urlink} target="_blank" rel="noreferrer">Read Article</a>
       </button>
-      <button onClick={() => deleteStoredNews(id)} className='card-detailed-btns'>Delete Article</button>
+      <button onClick={() => deleteNews} className='card-detailed-btns'>Delete Article</button>
     </div>
   );
 }
