@@ -31,7 +31,8 @@ export const SavedNewsCard: React.FC<Props> = ({
 
   const deleteNews = (): void => {
     deleteStoredNews(id);
-    
+    setIsDeleted(true);
+    setIsDisable(true);
   }
 
   return (
